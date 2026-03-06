@@ -1,0 +1,33 @@
+{
+  "slides": [
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/Why/3d394916962376587da12a3c4f782ac4d3c6b78bbf9239b1ae9c5481be0e5888.mp4",
+      "rev_file": "slides/files/Why/3d394916962376587da12a3c4f782ac4d3c6b78bbf9239b1ae9c5481be0e5888_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/Why/69bad2a7084e4dc723ee8797e932fec83ce13ff141667f301aa6a9249976171d.mp4",
+      "rev_file": "slides/files/Why/69bad2a7084e4dc723ee8797e932fec83ce13ff141667f301aa6a9249976171d_reversed.mp4"
+    }
+  ],
+  "resolution": [
+    1280,
+    720
+  ],
+  "background_color": "black"
+}

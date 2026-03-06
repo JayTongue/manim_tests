@@ -1,0 +1,33 @@
+{
+  "slides": [
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/PlotExample/1dfe531f17214c0eaedf7695cfe697faf4508dbf273ae418150f7ce218ee06d5.mp4",
+      "rev_file": "slides/files/PlotExample/1dfe531f17214c0eaedf7695cfe697faf4508dbf273ae418150f7ce218ee06d5_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/PlotExample/65132e2fdfc5a9415298e76366cc2e1155f3f1e246475babf5b16180cf61fcf0.mp4",
+      "rev_file": "slides/files/PlotExample/65132e2fdfc5a9415298e76366cc2e1155f3f1e246475babf5b16180cf61fcf0_reversed.mp4"
+    }
+  ],
+  "resolution": [
+    1280,
+    720
+  ],
+  "background_color": "black"
+}

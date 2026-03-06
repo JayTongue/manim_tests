@@ -1,0 +1,5 @@
+# This file is used internally by FFMPEG.
+file 'file:/media/saltlick/Totoro/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/AnovaGraph/1987512680_1604532075_223132457.mp4'
+file 'file:/media/saltlick/Totoro/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/AnovaGraph/2538612922_1550572828_3142250289.mp4'
+file 'file:/media/saltlick/Totoro/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/AnovaGraph/2538612922_1996155133_2936573597.mp4'
+file 'file:/media/saltlick/Totoro/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/AnovaGraph/2538612922_2834709167_2971250505.mp4'
