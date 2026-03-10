@@ -2,6 +2,7 @@ from manim import *
 from manim_slides import Slide
 import json
 import numpy as np
+import math
 
 config.media_dir = "./presentation_vids"
 np.random.seed(42)
@@ -107,47 +108,66 @@ class Methodology(Slide):
 
         data_sources_title = Text('Data Sources', font_size=36)
         data_sources_title = VGroup(data_sources_title, draw_box(data_sources_title))
-        ext_dat_text = Text('Existing Sources', font_size=24)
-        ext_dat_text = VGroup(ext_dat_text, draw_box(ext_dat_text))
-        ext_dat_text.shift(LEFT*2)
-        synth_dat_text = Text('Synthesized Sources', font_size=24)
-        synth_dat_text = VGroup(synth_dat_text, draw_box(synth_dat_text))
-        synth_dat_text.shift(RIGHT*2)
+        ext_dat_text = Text('Existing Sources', font_size=24).shift(LEFT*2)
+        ext_dat_box = draw_box(ext_dat_text)
+        # ext_dat_text = VGroup(ext_dat_text, draw_box(ext_dat_text))
+        synth_dat_text = Text('Synthesized Sources', font_size=24).shift(RIGHT*2)
+        synth_dat_box = draw_box(synth_dat_text)
+        # synth_dat_text = VGroup(synth_dat_text, draw_box(synth_dat_text))
 
         self.play(Write(data_sources_title))
-        self.play(data_sources_title.animate.shift(UP*3.5), Write(ext_dat_text), Write(synth_dat_text))
+        self.play(data_sources_title.animate.shift(UP*3.5), 
+                  Write(ext_dat_text), 
+                  Create(ext_dat_box),
+                  Write(synth_dat_text),
+                  Create(synth_dat_box))
 
-        ext_line = make_graph_line(data_sources_title, ext_dat_text)
-        synth_line = make_graph_line(data_sources_title, synth_dat_text)
+        ext_line = make_graph_line(data_sources_title, ext_dat_box)
+        synth_line = make_graph_line(data_sources_title, synth_dat_box)
 
         self.play(Create(ext_line), Create(synth_line))
         self.next_slide()
 
-        self.play(map(lambda x: x.animate.shift(UP*3.5).shift(RIGHT*2), [data_sources_title, ext_dat_text, synth_dat_text, ext_line, synth_line]))
-        self.play(map(lambda y: y.animate.set_opacity(0.3), [synth_line, synth_dat_text]))
+        self.play(map(lambda x: x.animate.shift(UP*3.5).shift(RIGHT*2), [data_sources_title, 
+                                                                         ext_dat_text, 
+                                                                         ext_dat_box,
+                                                                         synth_dat_text,
+                                                                         synth_dat_box, 
+                                                                         ext_line, 
+                                                                         synth_line]))
+        self.play(map(lambda y: y.animate.set_opacity(0.3), [synth_line, 
+                                                             synth_dat_text]))
 
-        enron_text = Text('Enron Email \nData Set V2', font_size=24)
-        enron_text = VGroup(enron_text, draw_box(enron_text)).shift(LEFT*2)
-        contracts_text = Text('Material Contracts \nCorpus', font_size=24)
-        contracts_text = VGroup(contracts_text, draw_box(contracts_text)).shift(RIGHT*2)
+        enron_text = Text('Enron Email \nData Set V2', font_size=24).shift(LEFT*2)
+        enron_box = draw_box(enron_text)
+        # enron_text = VGroup(enron_text, draw_box(enron_text))
+        contracts_text = Text('Material Contracts \nCorpus', font_size=24).shift(RIGHT*2)
+        contracts_box = draw_box(contracts_text)
+        # contracts_text = VGroup(contracts_text, draw_box(contracts_text))
 
-        enron_line = make_graph_line(ext_dat_text, enron_text)
-        contracts_line = make_graph_line(ext_dat_text, contracts_text)
+        enron_line = make_graph_line(ext_dat_box, enron_box)
+        contracts_line = make_graph_line(ext_dat_box, contracts_box)
 
         self.play(map(Write, [enron_text, contracts_text]))
-        self.play(map(Create, [enron_line, contracts_line]))
+        self.play(map(Create, [enron_line, contracts_line, enron_box, contracts_box]))
         self.next_slide()
-        self.play(map(lambda x: x.animate.shift(UP*3.5).shift(RIGHT*2), [data_sources_title, 
+        self.play(map(lambda x: x.animate.shift(UP*3.3).shift(RIGHT*2), [data_sources_title, 
                                                                      ext_dat_text, 
+                                                                     ext_dat_box,
                                                                      synth_dat_text,
+                                                                     synth_dat_box,
                                                                      ext_line,
                                                                      synth_line,
                                                                      enron_text,
+                                                                     enron_box,
                                                                      contracts_text,
+                                                                     contracts_box,
+                                                                     enron_text,
                                                                      enron_line,
                                                                      contracts_line]))
-        self.play(map(lambda y: y.animate.set_opacity(0.3), [contracts_text, contracts_line]))
-        self.next_slide()
+        self.play(map(lambda y: y.animate.set_opacity(0.3), [contracts_text,  
+                                                             contracts_line]), 
+                                                             contracts_box.animate.set_fill(0))
 
         enron_bullets = ['• Dataset created for Enron litigation by the Federal Energy Regulatory Commission',
                          '• Underwent many curration steps over time',
@@ -161,16 +181,21 @@ class Methodology(Slide):
         self.play(FadeOut(enron_bullets))
         self.play(map(lambda x: x.animate.shift(LEFT*4), [data_sources_title, 
                                                                      ext_dat_text, 
+                                                                     ext_dat_box,
                                                                      synth_dat_text,
+                                                                     synth_dat_box,
                                                                      ext_line,
                                                                      synth_line,
                                                                      enron_text,
+                                                                     enron_box,
                                                                      contracts_text,
+                                                                     contracts_box,
                                                                      enron_line,
                                                                      contracts_line]))
-        self.play(map(lambda x: x.animate.set_opacity(1), [contracts_line, contracts_text]))
-        self.play(map(lambda x: x.animate.set_opacity(0.3), [enron_line, enron_text]))
-        self.next_slide()
+        self.play(map(lambda x: x.animate.set_opacity(1), [contracts_line, 
+                                                           contracts_text]), 
+                                                           contracts_box.animate.set_fill(0), 
+                map(lambda x: x.animate.set_opacity(0.3), [enron_line, enron_text]))
 
         contract_bullets = ['• Compiled by Peter Adelson and Prof Julian Nyarko in 2025', 
                              '• Contains commercial contracts and metadata from the SEC\'s EDGAR',
@@ -181,14 +206,20 @@ class Methodology(Slide):
         self.play(Write(contract_bullets))
         self.next_slide()
         self.play(FadeOut(contract_bullets))
-        self.play(map(lambda x: x.animate.set_opacity(1), [enron_line, enron_text]))
+        self.play(map(lambda x: x.animate.set_opacity(1), [enron_line, 
+                                                           enron_text]), 
+                                                           enron_box.animate.set_fill(0))
         self.play(map(lambda x: x.animate.shift(RIGHT*2), [data_sources_title, 
                                                                      ext_dat_text, 
+                                                                     ext_dat_box,
                                                                      synth_dat_text,
+                                                                     synth_dat_box,
                                                                      ext_line,
                                                                      synth_line,
                                                                      enron_text,
+                                                                     enron_box,
                                                                      contracts_text,
+                                                                     contracts_box,
                                                                      enron_line,
                                                                      contracts_line]))
         
@@ -204,7 +235,7 @@ class Methodology(Slide):
                                 x_axis_config={'include_ticks': False}
                             )
         enron_graph.y_axis.numbers.set_opacity(0)
-        enron_graph.scale(0.5).shift(LEFT*2)
+        enron_graph.scale(0.5).shift(LEFT*1.5)
         contracts_graph = BarChart(values=logify(bins['lin']['contracts']),
                                 y_range=[0, 8],
                                 y_length=5,
@@ -213,17 +244,128 @@ class Methodology(Slide):
                                 x_axis_config={'include_ticks': False}
                             )
         contracts_graph.y_axis.numbers.set_opacity(0)
-        contracts_graph.scale(0.5).shift(RIGHT*4)
-        
+        contracts_graph.scale(0.5).shift(RIGHT*3)
+
+        big_line = Line(LEFT*3, RIGHT*3).shift(DOWN*3)
+        ticks = VGroup([Line(UP*0.1, DOWN*0.1).shift(LEFT*j).shift(DOWN*3)  for j in [i-3 for i in range(6,-1,-1)]])
+        updated_tick_pos = [math.log(i, 10)*7.1-3 for i in range(1, 8)]
+
+        lin_text = Text('Linear Scale', font_size=18).shift(DOWN*2.5)
+        log_text = Text('Log Scale', font_size=18).shift(DOWN*2.5)
+
         self.play(GrowFromEdge(enron_graph, DOWN), 
-                  GrowFromEdge(contracts_graph, DOWN))
+                  GrowFromEdge(contracts_graph, DOWN),)
         self.next_slide()
+        self.play(Write(lin_text), Create(big_line), Create(ticks))
+        self.next_slide()
+        self.play(TransformMatchingShapes(lin_text, log_text), 
+                  map(lambda n: ticks[n].animate.move_to(np.array([updated_tick_pos[n], -3, 0])), 
+                      [i for i in range(7)]))
         self.play(FadeOut(enron_graph), FadeOut(contracts_graph))
         enron_graph.change_bar_values(logify(bins['log']['enron']))
         contracts_graph.change_bar_values(logify(bins['log']['contracts']))
         self.play(GrowFromEdge(enron_graph, DOWN), GrowFromEdge(contracts_graph, DOWN))
 
+        log_normal_formula = MathTex(r"X", r"=", r"e^{", r"\mu", r"+", r"\sigma", r"Z", r"}")
+
+        mu_label = Text("mean", font_size=18)
+        sigma_label = Text("standard\ndeviation", font_size=18)
+        z_label = Text("normal random\nvariable", font_size=18)
+
+        # position labels
+        mu_label.next_to(log_normal_formula.get_part_by_tex(r"\mu"), UP, buff=1)
+        sigma_label.next_to(log_normal_formula.get_part_by_tex(r"\sigma"), DOWN, buff=1.5).shift(LEFT*1.5)
+        z_label.next_to(log_normal_formula.get_part_by_tex("Z"), DOWN, buff=2).shift(RIGHT*1.5)
+
+        # draw lines from formula to labels
+        mu_line = Line(log_normal_formula.get_part_by_tex(r"\mu").get_top(), mu_label.get_bottom(), buff=0.2)
+        sigma_line = Line(log_normal_formula.get_part_by_tex(r"\sigma").get_bottom(), sigma_label.get_top(), buff=0.2)
+        z_line = Line(log_normal_formula.get_part_by_tex("Z").get_bottom(), z_label.get_top(), buff=0.2)
+
+        enron_params = VGroup(
+            MathTex(r"\mu = 9.0723", font_size=30),
+            MathTex(r"\sigma = 1.8434", font_size=30)
+        ).arrange(DOWN, aligned_edge=LEFT).shift(UP*1.8).shift(LEFT*3)
+
+        contracts_params = VGroup(
+            MathTex(r"\mu = 10.866", font_size=30),
+            MathTex(r"\sigma = 1.4167", font_size=30)
+        ).arrange(DOWN, aligned_edge=LEFT).shift(UP*1.8).shift(RIGHT*3)
+
+        avg_params = VGroup(
+            MathTex(r"\mu = 9.96915", font_size=30),
+            MathTex(r"\sigma = 1.63005", font_size=30)
+        ).arrange(DOWN, aligned_edge=LEFT).shift(UP*1.8)
         
+        self.next_slide()
+        self.play(map(FadeOut, [enron_graph, contracts_graph, log_text, ticks, big_line]))
+        self.play(Write(log_normal_formula))
+        self.next_slide()
+        self.play(Create(mu_line), Write(mu_label))
+        self.play(Create(sigma_line), Write(sigma_label))
+        self.play(Create(z_line), Write(z_label))
+        self.next_slide()
+        self.play(map(FadeOut, [mu_line, mu_label, sigma_line, sigma_label, z_line, z_label]), 
+                  Write(enron_params), Write(contracts_params))
+        self.next_slide()
+        self.play(enron_params.animate.shift(RIGHT*3), contracts_params.animate.shift(LEFT*3))
+        self.play(TransformMatchingShapes(enron_params, avg_params), FadeOut(contracts_params))
+
+        func = MathTex(r"X = e^{9.97 + 1.63 Z}")
+
+        self.next_slide()
+        self.play(TransformMatchingShapes(log_normal_formula, func), FadeOut(avg_params))
+        self.next_slide()
+        self.play(func.animate.shift(DOWN*2))
+        self.play(map(lambda x: x.animate.shift(LEFT*4).shift(DOWN*7), [data_sources_title, 
+                                                                ext_dat_text, 
+                                                                ext_dat_box,
+                                                                synth_dat_text,
+                                                                synth_dat_box,
+                                                                ext_line,
+                                                                synth_line,
+                                                                enron_text,
+                                                                enron_box,
+                                                                contracts_text,
+                                                                contracts_box,
+                                                                enron_line,
+                                                                contracts_line]))
+        self.play(map(FadeOut, [enron_box, 
+                              enron_line, 
+                              enron_text, 
+                              contracts_box, 
+                              contracts_line, 
+                              contracts_text])) 
+        self.play(synth_dat_text.animate.set_opacity(1), 
+                  synth_line.animate.set_opacity(1), 
+                  ext_dat_text.animate.set_opacity(0.3), 
+                  ext_line.animate.set_opacity(0.3))
+        
+        markov_text = Text('Markov Text', font_size=24).shift(LEFT*2)
+        markov_box = draw_box(markov_text)
+        markov_line = make_graph_line(func, markov_box)
+        random_text = Text('Random Text', font_size=24)
+        random_box = draw_box(random_text)
+        random_line = make_graph_line(func, random_box)
+        zeros_text = Text('Zeros', font_size=24).shift(RIGHT*2)
+        zeros_box = draw_box(zeros_text)
+        zeros_line = make_graph_line(func, zeros_box)
+
+        self.next_slide()
+        self.play(func.animate.shift(UP*3.7),
+                  map(lambda x: x.animate.shift(UP*3.5), [data_sources_title, 
+                                                                ext_dat_text, 
+                                                                ext_dat_box,
+                                                                synth_dat_text,
+                                                                synth_dat_box,
+                                                                ext_line,
+                                                                synth_line,
+                                                                func]))
+        
+        self.play(map(Write, [markov_text, random_text, zeros_text]),
+                  map(Create, [markov_box, markov_line,
+                               random_box, random_line, 
+                               zeros_box, zeros_line]))
 
 
 
