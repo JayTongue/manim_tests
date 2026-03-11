@@ -415,6 +415,9 @@ class Methodology(Slide):
                                                                 zeros_samp]))
         self.play(Write(random_samp))
 
+        self.next_slide()
+        self.
+
 
 
 # class AnovaGraph(Slide):
