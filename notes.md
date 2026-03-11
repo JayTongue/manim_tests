@@ -30,6 +30,9 @@ This is just one data point, providing one perspective and a methology to consid
 * Lexis+ with Protege
 ###  Data Sources
 #### Corpora 
+* markov
+* Published by Andrey Markov in 1906
+* Developed to prove that the law of large numbers applied to dependent values
 #### File Sets
 ### Trials
 #### uploads
