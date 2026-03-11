@@ -246,12 +246,13 @@ class Methodology(Slide):
         contracts_graph.y_axis.numbers.set_opacity(0)
         contracts_graph.scale(0.5).shift(RIGHT*3)
 
-        big_line = Line(LEFT*3, RIGHT*3).shift(DOWN*3)
-        ticks = VGroup([Line(UP*0.1, DOWN*0.1).shift(LEFT*j).shift(DOWN*3)  for j in [i-3 for i in range(6,-1,-1)]])
+        big_line = Line(LEFT*3, RIGHT*3).shift(DOWN*2.5)
+        ticks = VGroup([Line(UP*0.1, DOWN*0.1).shift(LEFT*j).shift(DOWN*2.5)  for j in [i-3 for i in range(6,-1,-1)]])
         updated_tick_pos = [math.log(i, 10)*7.1-3 for i in range(1, 8)]
 
-        lin_text = Text('Linear Scale', font_size=18).shift(DOWN*2.5)
-        log_text = Text('Log Scale', font_size=18).shift(DOWN*2.5)
+        lin_text = Text('Linear Scale', font_size=18).shift(DOWN*2)
+        log_text = Text('Log Scale', font_size=18).shift(DOWN*2)
+        log_norm_text = Text('Lognormal Distribution', font_size=24).shift(DOWN*3)
 
         self.play(GrowFromEdge(enron_graph, DOWN), 
                   GrowFromEdge(contracts_graph, DOWN),)
@@ -259,12 +260,14 @@ class Methodology(Slide):
         self.play(Write(lin_text), Create(big_line), Create(ticks))
         self.next_slide()
         self.play(TransformMatchingShapes(lin_text, log_text), 
-                  map(lambda n: ticks[n].animate.move_to(np.array([updated_tick_pos[n], -3, 0])), 
+                  map(lambda n: ticks[n].animate.move_to(np.array([updated_tick_pos[n], -2.5, 0])), 
                       [i for i in range(7)]))
         self.play(FadeOut(enron_graph), FadeOut(contracts_graph))
         enron_graph.change_bar_values(logify(bins['log']['enron']))
         contracts_graph.change_bar_values(logify(bins['log']['contracts']))
         self.play(GrowFromEdge(enron_graph, DOWN), GrowFromEdge(contracts_graph, DOWN))
+        self.next_slide()
+        self.play(Write(log_norm_text))
 
         log_normal_formula = MathTex(r"X", r"=", r"e^{", r"\mu", r"+", r"\sigma", r"Z", r"}")
 
@@ -274,8 +277,8 @@ class Methodology(Slide):
 
         # position labels
         mu_label.next_to(log_normal_formula.get_part_by_tex(r"\mu"), UP, buff=1)
-        sigma_label.next_to(log_normal_formula.get_part_by_tex(r"\sigma"), DOWN, buff=1.5).shift(LEFT*1.5)
-        z_label.next_to(log_normal_formula.get_part_by_tex("Z"), DOWN, buff=2).shift(RIGHT*1.5)
+        sigma_label.next_to(log_normal_formula.get_part_by_tex(r"\sigma"), DOWN*0.5, buff=1.5).shift(LEFT*0.5)
+        z_label.next_to(log_normal_formula.get_part_by_tex("Z"), DOWN*0.5, buff=2).shift(RIGHT*1.5)
 
         # draw lines from formula to labels
         mu_line = Line(log_normal_formula.get_part_by_tex(r"\mu").get_top(), mu_label.get_bottom(), buff=0.2)
@@ -299,14 +302,14 @@ class Methodology(Slide):
         
         self.next_slide()
         self.play(map(FadeOut, [enron_graph, contracts_graph, log_text, ticks, big_line]))
-        self.play(Write(log_normal_formula))
+        self.play(log_norm_text.animate.shift(UP*1.5), Write(log_normal_formula))
         self.next_slide()
-        self.play(Create(mu_line), Write(mu_label))
+        self.play(Create(mu_line), Write(mu_label), log_norm_text.animate.shift(DOWN*1))
         self.play(Create(sigma_line), Write(sigma_label))
         self.play(Create(z_line), Write(z_label))
         self.next_slide()
         self.play(map(FadeOut, [mu_line, mu_label, sigma_line, sigma_label, z_line, z_label]), 
-                  Write(enron_params), Write(contracts_params))
+                  Write(enron_params), Write(contracts_params), log_norm_text.animate.shift(UP*1))
         self.next_slide()
         self.play(enron_params.animate.shift(RIGHT*3), contracts_params.animate.shift(LEFT*3))
         self.play(TransformMatchingShapes(enron_params, avg_params), FadeOut(contracts_params))
@@ -316,7 +319,7 @@ class Methodology(Slide):
         self.next_slide()
         self.play(TransformMatchingShapes(log_normal_formula, func), FadeOut(avg_params))
         self.next_slide()
-        self.play(func.animate.shift(DOWN*2))
+        self.play(func.animate.shift(DOWN*1), FadeOut(log_norm_text))
         self.play(map(lambda x: x.animate.shift(LEFT*4).shift(DOWN*7), [data_sources_title, 
                                                                 ext_dat_text, 
                                                                 ext_dat_box,
@@ -341,16 +344,13 @@ class Methodology(Slide):
                   ext_dat_text.animate.set_opacity(0.3), 
                   ext_line.animate.set_opacity(0.3))
         
-        markov_text = Text('Markov Text', font_size=24).shift(LEFT*2)
+        markov_text = Text('Markov Text', font_size=24).shift(RIGHT*3)
         markov_box = draw_box(markov_text)
-        markov_line = make_graph_line(func, markov_box)
         random_text = Text('Random Text', font_size=24)
         random_box = draw_box(random_text)
-        random_line = make_graph_line(func, random_box)
-        zeros_text = Text('Zeros', font_size=24).shift(RIGHT*2)
+        zeros_text = Text('Zeros', font_size=24).shift(LEFT*3)
         zeros_box = draw_box(zeros_text)
-        zeros_line = make_graph_line(func, zeros_box)
-
+        
         self.next_slide()
         self.play(func.animate.shift(UP*3.7),
                   map(lambda x: x.animate.shift(UP*3.5), [data_sources_title, 
@@ -362,10 +362,58 @@ class Methodology(Slide):
                                                                 synth_line,
                                                                 func]))
         
-        self.play(map(Write, [markov_text, random_text, zeros_text]),
-                  map(Create, [markov_box, markov_line,
+        self.play(map(Write, [markov_text, random_text, zeros_text]))
+        markov_line = make_graph_line(func, markov_box)
+        random_line = make_graph_line(func, random_box)
+        zeros_line = make_graph_line(func, zeros_box)
+        self.play(map(Create, [markov_box, markov_line,
                                random_box, random_line, 
                                zeros_box, zeros_line]))
+        self.next_slide()
+        self.play(map(lambda x: x.animate.shift(UP*3.5).shift(RIGHT*3), [data_sources_title, 
+                                                                ext_dat_text, 
+                                                                ext_dat_box,
+                                                                synth_dat_text,
+                                                                synth_dat_box,
+                                                                ext_line,
+                                                                synth_line,
+                                                                func,
+                                                                markov_text,
+                                                                markov_box,
+                                                                markov_line,
+                                                                random_text,
+                                                                random_box,
+                                                                random_line,
+                                                                zeros_text,
+                                                                zeros_box,
+                                                                zeros_line]))
+        self.play(map(lambda x: x.animate.set_opacity(0.3), [random_text, random_line, markov_text, markov_line]))
+
+        zeros_samp =  Text('00000000000\n00000000000\n00000000000\n00000000000', font_size=24)
+        random_samp = Text('26c1e3ae1d4\n7faf7b4579b\n353ab30e6d8\nba0c6d9e6fa', font_size=24)
+
+        self.next_slide()
+        self.play(Write(zeros_samp))
+        self.next_slide()
+        self.play(map(lambda x: x.animate.shift(LEFT*3), [data_sources_title, 
+                                                                ext_dat_text, 
+                                                                ext_dat_box,
+                                                                synth_dat_text,
+                                                                synth_dat_box,
+                                                                ext_line,
+                                                                synth_line,
+                                                                func,
+                                                                markov_text,
+                                                                markov_box,
+                                                                markov_line,
+                                                                random_text,
+                                                                random_box,
+                                                                random_line,
+                                                                zeros_text,
+                                                                zeros_box,
+                                                                zeros_line,
+                                                                zeros_samp]))
+        self.play(Write(random_samp))
 
 
 
