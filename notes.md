@@ -33,6 +33,7 @@ This is just one data point, providing one perspective and a methology to consid
 * markov
 * Published by Andrey Markov in 1906
 * Developed to prove that the law of large numbers applied to dependent values
+* Trained on the United States Reports (1754-2014)
 #### File Sets
 ### Trials
 #### uploads
