@@ -9,8 +9,8 @@
       "dedent_notes": true,
       "skip_animations": false,
       "src": null,
-      "file": "slides/files/AnovaGraph/2f6625cc023d50fab9dfbb0847dc1bad3072b762e20134657192940e1a36e196.mp4",
-      "rev_file": "slides/files/AnovaGraph/2f6625cc023d50fab9dfbb0847dc1bad3072b762e20134657192940e1a36e196_reversed.mp4"
+      "file": "slides/files/AnovaGraph/204e7b24ec067b940ce9594887b5b3d254f12ac4cffb363b941f38dc4495c284.mp4",
+      "rev_file": "slides/files/AnovaGraph/204e7b24ec067b940ce9594887b5b3d254f12ac4cffb363b941f38dc4495c284_reversed.mp4"
     },
     {
       "loop": false,
@@ -21,8 +21,44 @@
       "dedent_notes": true,
       "skip_animations": false,
       "src": null,
-      "file": "slides/files/AnovaGraph/118c0b5e27a46b14a30a94d36e4058431a2d4c3c121ce904936ba45e30978563.mp4",
-      "rev_file": "slides/files/AnovaGraph/118c0b5e27a46b14a30a94d36e4058431a2d4c3c121ce904936ba45e30978563_reversed.mp4"
+      "file": "slides/files/AnovaGraph/66db8fa58a52eb2b9dc792266983709fc9c542c184babca1948092d705408408.mp4",
+      "rev_file": "slides/files/AnovaGraph/66db8fa58a52eb2b9dc792266983709fc9c542c184babca1948092d705408408_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/AnovaGraph/f17c3be847b3d0a469ab521d4c42aa2a5ac40a6e112e7a51aad3983f278efbc2.mp4",
+      "rev_file": "slides/files/AnovaGraph/f17c3be847b3d0a469ab521d4c42aa2a5ac40a6e112e7a51aad3983f278efbc2_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/AnovaGraph/3387f3cc1997d4584c6d46e9073175af0e9e45eef0d15a3ca8f444bd8e7086e1.mp4",
+      "rev_file": "slides/files/AnovaGraph/3387f3cc1997d4584c6d46e9073175af0e9e45eef0d15a3ca8f444bd8e7086e1_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/AnovaGraph/8727b43e9637895d9ae43f6004301747d6993c758248c16802584704cb0cf3a8.mp4",
+      "rev_file": "slides/files/AnovaGraph/8727b43e9637895d9ae43f6004301747d6993c758248c16802584704cb0cf3a8_reversed.mp4"
     }
   ],
   "resolution": [
