@@ -847,5 +847,6 @@ np.random.seed(42)
 
 class Regression(Slide):
     def construct(self):
-        
+        with open('data/fit_stats.json', 'r') as infile:
+            data = json.load(infile)
         
