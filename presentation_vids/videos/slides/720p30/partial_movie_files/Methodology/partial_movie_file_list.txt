@@ -1,4 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:/media/saltlick/Totoro/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/Methodology/4191935098_3712512328_223132457.mp4'
-file 'file:/media/saltlick/Totoro/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/Methodology/454416374_744023532_1701989773.mp4'
-file 'file:/media/saltlick/Totoro/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/Methodology/454416374_4090981271_3607190234.mp4'

@@ -1,9 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:/media/saltlick/Totoro/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/Results/1987512680_1108010960_223132457.mp4'
-file 'file:/media/saltlick/Totoro/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/Results/2538612922_3596283747_1701989773.mp4'
-file 'file:/media/saltlick/Totoro/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/Results/2538612922_3784024070_3607190234.mp4'
-file 'file:/media/saltlick/Totoro/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/Results/2538612922_436554360_223132457.mp4'
-file 'file:/media/saltlick/Totoro/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/Results/2538612922_1876439815_232503861.mp4'
-file 'file:/media/saltlick/Totoro/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/Results/2538612922_231324199_223132457.mp4'
-file 'file:/media/saltlick/Totoro/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/Results/2538612922_4184562456_2564795919.mp4'
-file 'file:/media/saltlick/Totoro/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/Results/2538612922_956386359_2876613123.mp4'

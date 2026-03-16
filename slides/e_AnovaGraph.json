@@ -1,0 +1,69 @@
+{
+  "slides": [
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/e_AnovaGraph/8a282564b99b977a62e264b3ebfe5257eccbcdaf409fe7ffe972ec8d4be30d30.mp4",
+      "rev_file": "slides/files/e_AnovaGraph/8a282564b99b977a62e264b3ebfe5257eccbcdaf409fe7ffe972ec8d4be30d30_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/e_AnovaGraph/49bf8b661641625552d23b3aee8b2a3e9ce7b59342f0c5d0f94fdd2ce358fc19.mp4",
+      "rev_file": "slides/files/e_AnovaGraph/49bf8b661641625552d23b3aee8b2a3e9ce7b59342f0c5d0f94fdd2ce358fc19_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/e_AnovaGraph/4c823fbc1fa0d6562f672df1f0f99342b2894377648708dac8f5da03d1cf2743.mp4",
+      "rev_file": "slides/files/e_AnovaGraph/4c823fbc1fa0d6562f672df1f0f99342b2894377648708dac8f5da03d1cf2743_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/e_AnovaGraph/b93dc0d4d73e45721a628784fad0936c6df5ba7cd1de0ca567c8b08645395715.mp4",
+      "rev_file": "slides/files/e_AnovaGraph/b93dc0d4d73e45721a628784fad0936c6df5ba7cd1de0ca567c8b08645395715_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/e_AnovaGraph/c72c1021ec03f449e82dd89c7ca6f6a6853eb13241d22bc91857de9af973ec0a.mp4",
+      "rev_file": "slides/files/e_AnovaGraph/c72c1021ec03f449e82dd89c7ca6f6a6853eb13241d22bc91857de9af973ec0a_reversed.mp4"
+    }
+  ],
+  "resolution": [
+    1280,
+    720
+  ],
+  "background_color": "black"
+}
