@@ -21,8 +21,8 @@
       "dedent_notes": true,
       "skip_animations": false,
       "src": null,
-      "file": "slides/files/e_AnovaGraph/49bf8b661641625552d23b3aee8b2a3e9ce7b59342f0c5d0f94fdd2ce358fc19.mp4",
-      "rev_file": "slides/files/e_AnovaGraph/49bf8b661641625552d23b3aee8b2a3e9ce7b59342f0c5d0f94fdd2ce358fc19_reversed.mp4"
+      "file": "slides/files/e_AnovaGraph/70b5d10a7c12f25a031a76dffa1e9a68cb50f04a947663864bb0f5c4a2db33e0.mp4",
+      "rev_file": "slides/files/e_AnovaGraph/70b5d10a7c12f25a031a76dffa1e9a68cb50f04a947663864bb0f5c4a2db33e0_reversed.mp4"
     },
     {
       "loop": false,
@@ -33,8 +33,80 @@
       "dedent_notes": true,
       "skip_animations": false,
       "src": null,
-      "file": "slides/files/e_AnovaGraph/4c823fbc1fa0d6562f672df1f0f99342b2894377648708dac8f5da03d1cf2743.mp4",
-      "rev_file": "slides/files/e_AnovaGraph/4c823fbc1fa0d6562f672df1f0f99342b2894377648708dac8f5da03d1cf2743_reversed.mp4"
+      "file": "slides/files/e_AnovaGraph/35ee47edaa8a98c54a8f1e329d59bba91607647ffd900087881ca9adc764f961.mp4",
+      "rev_file": "slides/files/e_AnovaGraph/35ee47edaa8a98c54a8f1e329d59bba91607647ffd900087881ca9adc764f961_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/e_AnovaGraph/64cbe4bd461be3c346843457979bf6802e69e0e601be8644662c01bb164c9079.mp4",
+      "rev_file": "slides/files/e_AnovaGraph/64cbe4bd461be3c346843457979bf6802e69e0e601be8644662c01bb164c9079_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/e_AnovaGraph/9b539880a854473e22d049e9027139f2e015d40e1f82eb38e4af4adb5979839a.mp4",
+      "rev_file": "slides/files/e_AnovaGraph/9b539880a854473e22d049e9027139f2e015d40e1f82eb38e4af4adb5979839a_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/e_AnovaGraph/5297b7ae3487c4192ed33257cad1bd7677e793d626cc8753691d9a8cd700ad43.mp4",
+      "rev_file": "slides/files/e_AnovaGraph/5297b7ae3487c4192ed33257cad1bd7677e793d626cc8753691d9a8cd700ad43_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/e_AnovaGraph/38803816e576d3bcbf6675037caa438aa069c80a9f075c6d8f652e190018f0d5.mp4",
+      "rev_file": "slides/files/e_AnovaGraph/38803816e576d3bcbf6675037caa438aa069c80a9f075c6d8f652e190018f0d5_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/e_AnovaGraph/2baa8f6d85677836cde9e5fcf15a019fa083ee93cf718350234b4ef91d4c88bb.mp4",
+      "rev_file": "slides/files/e_AnovaGraph/2baa8f6d85677836cde9e5fcf15a019fa083ee93cf718350234b4ef91d4c88bb_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/e_AnovaGraph/2a6fce082cf9444770dbbc2fcd429ad46eaf694a828f57c8b4ba1144e87edacf.mp4",
+      "rev_file": "slides/files/e_AnovaGraph/2a6fce082cf9444770dbbc2fcd429ad46eaf694a828f57c8b4ba1144e87edacf_reversed.mp4"
     },
     {
       "loop": false,
@@ -57,8 +129,8 @@
       "dedent_notes": true,
       "skip_animations": false,
       "src": null,
-      "file": "slides/files/e_AnovaGraph/c72c1021ec03f449e82dd89c7ca6f6a6853eb13241d22bc91857de9af973ec0a.mp4",
-      "rev_file": "slides/files/e_AnovaGraph/c72c1021ec03f449e82dd89c7ca6f6a6853eb13241d22bc91857de9af973ec0a_reversed.mp4"
+      "file": "slides/files/e_AnovaGraph/602e4aca371d0d3376e58cb94219ba9d8f01e023b0bccdd139a1c556d8ceabb4.mp4",
+      "rev_file": "slides/files/e_AnovaGraph/602e4aca371d0d3376e58cb94219ba9d8f01e023b0bccdd139a1c556d8ceabb4_reversed.mp4"
     }
   ],
   "resolution": [
