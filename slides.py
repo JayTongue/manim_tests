@@ -84,7 +84,7 @@ class b_Why(Slide):
         bullets = ['• Which tasks in my library or practice group can legal AI be used for?', 
                    '• What is the best way of using legal AI to perform those tasks?', 
                    '• What is the likely outcome of these use instances?', 
-                   '• Does the upsides of this use outweigh the downsides?']
+                   '• Do the upsides of this use outweigh the downsides?']
         bullets = VGroup(map(lambda x: Text(x, font_size=24), bullets)).arrange(DOWN, aligned_edge=LEFT, buff=0.5)
 
         self.play(text_2.animate.shift(DOWN*3.5), FadeIn(text_1.move_to(ORIGIN).shift(UP*2)))
@@ -182,7 +182,7 @@ class c_Methodology(Slide, ThreeDScene):
                                                              contracts_box.animate.set_fill(0))
 
         enron_bullets = ['• Dataset created for Enron litigation by the Federal Energy Regulatory Commission',
-                         '• Underwent many curration steps over time',
+                         '• Underwent many curation steps over time',
                          '• Difficult to find in its full form',
                          '• Full(?) version available from the Internet Archive',
                          '• Total Size: 3,424,192 files; 258.9 GB']
@@ -1196,7 +1196,7 @@ class g_Conclusion(Slide, ThreeDScene):
                                                            '{x} and {y} do not both know of {topic}', 
                                                            '{y} knows of {topic}']])
         problem.arrange(DOWN, aligned_edge=LEFT, buff=0.5).shift(UP*1)
-        question = Text('Q: does {x} know of topic?', font_size=18).next_to(problem, LEFT, buff=1)
+        question = Text('Q: does {x} know of {topic}?', font_size=18).next_to(problem, LEFT, buff=1)
 
         colors = [BLUE, GREEN, YELLOW, RED, PURPLE, WHITE, GRAY]
         docs = VGroup()
