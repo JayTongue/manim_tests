@@ -639,6 +639,21 @@ class c_Methodology(Slide, ThreeDScene):
                                 fileline_0, fileline_1, 
                                 clue_box, informal_clue_filled,
                                 qa_box, informal_qa_filled]))
+        
+        quest_exp= 'When did Myrna Minkoff know there was a major data leak?
+When did Rosa Dartle know there was a major data leak?
+If Dora Spenlow has the email about the uncontrolled chain reactions, would Tommy Traddles have email about the uncontrolled chain reactions?
+If Havelock Vetinari has the email about the falsified allegations, would Glawen Curr have email about the falsified allegations?
+Does Sam Vimes believe salaries were raised?
+Does Martin Decoud know of Frederick Tyler's report?
+Answer all questions but DO NOT do a document by document analysis for ANY part of the response. DO NOT make a timeline.
+--------------- answers ---------------
+Myrna Minkoff knew there was a major data leak on January 21, 1997
+Rosa Dartle knew there was a major data leak on September 27, 1997
+yes
+yes
+likely
+yes'
 
         def make_blob(n_points, center, color):
             base_radius = math.cbrt(n_points*0.01)
