@@ -16,86 +16,86 @@ np.random.seed(42)
 def draw_box(text, color=WHITE, buff=0.2):
     return SurroundingRectangle(text, color=color, buff=buff, fill_opacity=0)
 
-class a_Intro(Slide):
-    def construct(self):
-        title = Text('Shortcuts the Long Way Around', font_size=56)
-        title.shift(UP*1)
+# class a_Intro(Slide):
+#     def construct(self):
+#         title = Text('Shortcuts the Long Way Around', font_size=56)
+#         title.shift(UP*1)
         
-        bio = VGroup(map(lambda x: Text(x, font_size=24), ['Justin Tung',
-                                                          'Reference Librarian & Lecturer',
-                                                          'Univ. of Tex. School of Law']))
-        bio.arrange(DOWN, aligned_edge=LEFT, buff=0.3)
-        bio.next_to(title, DOWN, buff=1).shift(LEFT*3)
+#         bio = VGroup(map(lambda x: Text(x, font_size=24), ['Justin Tung',
+#                                                           'Reference Librarian & Lecturer',
+#                                                           'Univ. of Tex. School of Law']))
+#         bio.arrange(DOWN, aligned_edge=LEFT, buff=0.3)
+#         bio.next_to(title, DOWN, buff=1).shift(LEFT*3)
 
-        self.next_slide()
-        self.play(Write(title))
-        self.next_slide()
-        self.play(FadeIn(bio))
-        self.next_slide()
-        self.play(map(FadeOut, [title, bio]))
+#         self.next_slide()
+#         self.play(Write(title))
+#         self.next_slide()
+#         self.play(FadeIn(bio))
+#         self.next_slide()
+#         self.play(map(FadeOut, [title, bio]))
 
 
 
-class b_Why(Slide):
-    def construct(self):
-        warning = Text('A warning to the math phobic...', font_size=36)
-        self.play(Write(warning))
-        self.next_slide()
-        self.play(FadeOut(warning))
-        text_1 = Text('I. What is this project\nand why does it matter?', font_size=36)
-        text_1.move_to(ORIGIN)
+# class b_Why(Slide):
+#     def construct(self):
+#         warning = Text('A warning to the math phobic...', font_size=36)
+#         self.play(Write(warning))
+#         self.next_slide()
+#         self.play(FadeOut(warning))
+#         text_1 = Text('I. What is this project\nand why does it matter?', font_size=36)
+#         text_1.move_to(ORIGIN)
         
-        text_2 = Text('1. Vendor Claims', font_size=24)
+#         text_2 = Text('1. Vendor Claims', font_size=24)
         
-        harvey_img = ImageMobject('exhibits/harvey_claims.png')
-        harvey_img.scale(0.8)
+#         harvey_img = ImageMobject('exhibits/harvey_claims.png')
+#         harvey_img.scale(0.8)
 
-        h_rect_1 = Rectangle(width=3.9, height=1, color=GREEN_D).set_z_index(1)
-        h_rect_1.next_to(harvey_img, UP, buff=-1.5) ; h_rect_1.shift(LEFT*1.65)
-        h_rect_2 = Rectangle(width=2.8, height=0.6, color=GREEN_D).set_z_index(1)
-        h_rect_2.next_to(harvey_img, RIGHT, buff=-3.2) ; h_rect_2.shift(DOWN*1.8)
+#         h_rect_1 = Rectangle(width=3.9, height=1, color=GREEN_D).set_z_index(1)
+#         h_rect_1.next_to(harvey_img, UP, buff=-1.5) ; h_rect_1.shift(LEFT*1.65)
+#         h_rect_2 = Rectangle(width=2.8, height=0.6, color=GREEN_D).set_z_index(1)
+#         h_rect_2.next_to(harvey_img, RIGHT, buff=-3.2) ; h_rect_2.shift(DOWN*1.8)
 
-        lexis_img = ImageMobject('exhibits/lexis_claims.png')
-        lexis_img.scale(0.8)
-        l_rect_1 = Rectangle(width=2.7, height=0.8, color=GREEN_D).set_z_index(1)
-        l_rect_1.next_to(lexis_img, RIGHT, buff=-3.5) ; l_rect_1.shift(DOWN*1.05)
+#         lexis_img = ImageMobject('exhibits/lexis_claims.png')
+#         lexis_img.scale(0.8)
+#         l_rect_1 = Rectangle(width=2.7, height=0.8, color=GREEN_D).set_z_index(1)
+#         l_rect_1.next_to(lexis_img, RIGHT, buff=-3.5) ; l_rect_1.shift(DOWN*1.05)
         
 
-        self.play(Write(text_1))
-        self.next_slide()
-        self.play(text_1.animate.shift(UP*2))
-        self.play(Write(text_2))
-        self.next_slide()
-        self.play(text_2.animate.shift(UP*3.5), FadeOut(text_1))
-        self.play(FadeIn(harvey_img))
-        self.next_slide()
-        self.play(FadeIn(h_rect_1))
-        self.next_slide()
-        self.play(FadeIn(h_rect_2))
-        self.next_slide()
-        self.play(map(FadeOut, [h_rect_1, h_rect_2, harvey_img]), FadeIn(lexis_img))
-        self.next_slide()
-        self.play(FadeIn(l_rect_1))
-        self.next_slide()
-        self.play(FadeOut(l_rect_1), FadeOut(lexis_img))
+#         self.play(Write(text_1))
+#         self.next_slide()
+#         self.play(text_1.animate.shift(UP*2))
+#         self.play(Write(text_2))
+#         self.next_slide()
+#         self.play(text_2.animate.shift(UP*3.5), FadeOut(text_1))
+#         self.play(FadeIn(harvey_img))
+#         self.next_slide()
+#         self.play(FadeIn(h_rect_1))
+#         self.next_slide()
+#         self.play(FadeIn(h_rect_2))
+#         self.next_slide()
+#         self.play(map(FadeOut, [h_rect_1, h_rect_2, harvey_img]), FadeIn(lexis_img))
+#         self.next_slide()
+#         self.play(FadeIn(l_rect_1))
+#         self.next_slide()
+#         self.play(FadeOut(l_rect_1), FadeOut(lexis_img))
 
-        text_3 = Text('2. Developing Use Guidelines', font_size=24)
+#         text_3 = Text('2. Developing Use Guidelines', font_size=24)
 
-        bullets = ['• Which tasks in my library or practice group can legal AI be used for?', 
-                   '• What is the best way of using legal AI to perform those tasks?', 
-                   '• What is the likely outcome of these use instances?', 
-                   '• Do the upsides of this use outweigh the downsides?']
-        bullets = VGroup(map(lambda x: Text(x, font_size=24), bullets)).arrange(DOWN, aligned_edge=LEFT, buff=0.5)
+#         bullets = ['• Which tasks in my library or practice group can legal AI be used for?', 
+#                    '• What is the best way of using legal AI to perform those tasks?', 
+#                    '• What is the likely outcome of these use instances?', 
+#                    '• Do the upsides of this use outweigh the downsides?']
+#         bullets = VGroup(map(lambda x: Text(x, font_size=24), bullets)).arrange(DOWN, aligned_edge=LEFT, buff=0.5)
 
-        self.play(text_2.animate.shift(DOWN*3.5), FadeIn(text_1.move_to(ORIGIN).shift(UP*2)))
-        self.next_slide()
-        self.play(Write(text_3.shift(DOWN*1)))
-        self.next_slide()
-        self.play(map(FadeOut, [text_1, text_2]), text_3.animate.shift(UP*4.5))
+#         self.play(text_2.animate.shift(DOWN*3.5), FadeIn(text_1.move_to(ORIGIN).shift(UP*2)))
+#         self.next_slide()
+#         self.play(Write(text_3.shift(DOWN*1)))
+#         self.next_slide()
+#         self.play(map(FadeOut, [text_1, text_2]), text_3.animate.shift(UP*4.5))
 
-        for bullet in bullets:
-            self.play(Write(bullet.shift(UP*1)))
-            self.next_slide()
+#         for bullet in bullets:
+#             self.play(Write(bullet.shift(UP*1)))
+#             self.next_slide()
 
 
 class c_Methodology(Slide, ThreeDScene):
@@ -637,23 +637,60 @@ class c_Methodology(Slide, ThreeDScene):
         self.play(map(FadeOut, [line_0, line_0_arrow, 
                                 line_1, line_1_arrow, 
                                 fileline_0, fileline_1, 
-                                clue_box, informal_clue_filled,
-                                qa_box, informal_qa_filled]))
+                                informal_clue_filled,
+                                informal_qa_filled]))
         
-        quest_exp= 'When did Myrna Minkoff know there was a major data leak?
-When did Rosa Dartle know there was a major data leak?
-If Dora Spenlow has the email about the uncontrolled chain reactions, would Tommy Traddles have email about the uncontrolled chain reactions?
-If Havelock Vetinari has the email about the falsified allegations, would Glawen Curr have email about the falsified allegations?
-Does Sam Vimes believe salaries were raised?
-Does Martin Decoud know of Frederick Tyler's report?
-Answer all questions but DO NOT do a document by document analysis for ANY part of the response. DO NOT make a timeline.
---------------- answers ---------------
-Myrna Minkoff knew there was a major data leak on January 21, 1997
-Rosa Dartle knew there was a major data leak on September 27, 1997
-yes
-yes
-likely
-yes'
+        quest_exp = ['When did Myrna Minkoff know of the \n    falsified allegations?', 
+                    'When did Rosa Dartle know there was a \n    major data leak?',
+                    'If Dora Spenlow has the email about the uncontrolled \n    chain reactions, would Tommy Traddles \n    have email about the uncontrolled chain reactions?', 
+                    'Havelock Vetinari has the email about the falsified \n    allegations. Does Glawen Curr have the email \n    about the falsified allegations?', 
+                    'Does Sam Vimes believe that the cash flow issues were reported?',
+                    'Does Martin Decoud know of Frederick Tyler\'s report?']
+        quest_exp = VGroup(*[Text(x, font_size=18) for x in quest_exp]).arrange(DOWN, aligned_edge=LEFT, buff=0.5)
+
+        ans_exp = ['Myrna Minkoff knew of the falsified \n    allegations on January 21, 1997',
+                   'Rosa Dartle knew there was a major\n     data leak on September 27, 1983',
+                   'yes',
+                   'no',
+                   'likely',
+                   'yes']
+        ans_exp = VGroup(*[Text(x, font_size=18) for x in ans_exp]).arrange(DOWN, aligned_edge=LEFT, buff=0.5)
+        clues_exp = Text('Files with Clues', font_size=24)
+
+        tracker_1 = ValueTracker(7)
+        tracker_2 = ValueTracker(2)
+        tracker_3 = ValueTracker(2)
+        pos_tracker = ValueTracker(0)
+
+        rect1 = always_redraw(lambda: Rectangle(
+            width=tracker_1.get_value(), height=6,
+            fill_color=BLUE_E, fill_opacity=0.2, stroke_width=0
+        ).shift(RIGHT * pos_tracker.get_value())).shift(DOWN*1)
+
+        rect2 = always_redraw(lambda: Rectangle(
+            width=tracker_2.get_value(), height=6,
+            fill_color=GREEN_E, fill_opacity=0.2, stroke_width=0
+        ).next_to(rect1, LEFT, buff=0.5))
+
+        rect3 = always_redraw(lambda: Rectangle(
+            width=tracker_3.get_value(), height=6,
+            fill_color=PURPLE_E, fill_opacity=0.2, stroke_width=0
+        ).next_to(rect1, RIGHT, buff=0.5))
+
+        self.play(TransformMatchingShapes(clue_box, rect2), TransformMatchingShapes(qa_box, rect1))    
+        self.add(rect1, rect2, rect3)
+        self.play(tracker_1.animate.set_value(2), tracker_2.animate.set_value(7), tracker_3.animate.set_value(2), pos_tracker.animate.set_value(3))
+        self.play(Write(clues_exp.move_to(rect2.get_center())))
+        self.next_slide()
+        self.play(FadeOut(clues_exp))
+        self.play(tracker_1.animate.set_value(7), tracker_2.animate.set_value(2), tracker_3.animate.set_value(2), pos_tracker.animate.set_value(0))
+        self.play(Write(quest_exp.move_to(rect1.get_center())))
+        self.next_slide()
+        self.play(FadeOut(quest_exp))
+        self.play(tracker_1.animate.set_value(2), tracker_2.animate.set_value(2), tracker_3.animate.set_value(7), pos_tracker.animate.set_value(-3))
+        self.play(Write(ans_exp.move_to(rect3.get_center())))
+        self.next_slide()
+        self.play(*map(FadeOut, [rect1, rect2, rect3, ans_exp]))
 
         def make_blob(n_points, center, color):
             base_radius = math.cbrt(n_points*0.01)
@@ -757,515 +794,515 @@ yes'
                                 grid_box]))
 
 
-class d_Results(Slide):
-    def construct(self):
-        # tired_boss = ImageMobject('exhibits/tired_boss.png').shift(LEFT*3).scale(0.7)
-        # boss_label = Text('The AI', font_size=24).next_to(tired_boss, UP)
-        # tired_dad = ImageMobject('exhibits/tired_dad.png').shift(RIGHT*3)
-        # dad_label = Text('Me', font_size=24).next_to(tired_dad, UP)
+# class d_Results(Slide):
+#     def construct(self):
+#         # tired_boss = ImageMobject('exhibits/tired_boss.png').shift(LEFT*3).scale(0.7)
+#         # boss_label = Text('The AI', font_size=24).next_to(tired_boss, UP)
+#         # tired_dad = ImageMobject('exhibits/tired_dad.png').shift(RIGHT*3)
+#         # dad_label = Text('Me', font_size=24).next_to(tired_dad, UP)
 
-        # self.play(FadeIn(tired_dad), Write(dad_label))
-        # self.next_slide()
-        # self.play(FadeIn(tired_boss), Write(boss_label))
-        # self.next_slide()
-        # self.play(map(FadeOut, [tired_dad, tired_boss, dad_label, boss_label]))
+#         # self.play(FadeIn(tired_dad), Write(dad_label))
+#         # self.next_slide()
+#         # self.play(FadeIn(tired_boss), Write(boss_label))
+#         # self.next_slide()
+#         # self.play(map(FadeOut, [tired_dad, tired_boss, dad_label, boss_label]))
 
-        results_text = Text('III. Results', font_size=36)
-        results_text = VGroup(results_text, draw_box(results_text))
-        self.play(FadeIn(results_text))
-        self.next_slide()
-        self.play(FadeOut(results_text))
+#         results_text = Text('III. Results', font_size=36)
+#         results_text = VGroup(results_text, draw_box(results_text))
+#         self.play(FadeIn(results_text))
+#         self.next_slide()
+#         self.play(FadeOut(results_text))
 
-        lex_email = ImageMobject('exhibits/lex_email.png').scale(2)
-        highlight_0 = Rectangle(height=0.3, width=4, fill_color=YELLOW, fill_opacity=0.2, stroke_width=0)
-        highlight_0.next_to(lex_email, RIGHT).shift(DOWN*1.25).shift(LEFT*4.8)
-        highlight_1 = Rectangle(height=0.3, width=3, fill_color=YELLOW, fill_opacity=0.2, stroke_width=0)
-        highlight_1.next_to(lex_email, LEFT).shift(DOWN*1.6).shift(RIGHT*3.3)
+#         lex_email = ImageMobject('exhibits/lex_email.png').scale(2)
+#         highlight_0 = Rectangle(height=0.3, width=4, fill_color=YELLOW, fill_opacity=0.2, stroke_width=0)
+#         highlight_0.next_to(lex_email, RIGHT).shift(DOWN*1.25).shift(LEFT*4.8)
+#         highlight_1 = Rectangle(height=0.3, width=3, fill_color=YELLOW, fill_opacity=0.2, stroke_width=0)
+#         highlight_1.next_to(lex_email, LEFT).shift(DOWN*1.6).shift(RIGHT*3.3)
 
-        self.play(FadeIn(lex_email))
-        self.next_slide()
-        self.play(*[Create(i) for i in [highlight_0, highlight_1]])
+#         self.play(FadeIn(lex_email))
+#         self.next_slide()
+#         self.play(*[Create(i) for i in [highlight_0, highlight_1]])
 
-        self.next_slide()
-        self.play(map(FadeOut, [lex_email, highlight_0, highlight_1]))
-
-
-class e_AnovaGraph(Slide):
-    def construct(self):
-        def make_blob(n_points, center, color):
-            base_radius = math.cbrt(n_points*0.15)
-            angles = np.random.uniform(0, 2*np.pi, n_points)
-            radii = np.sqrt(np.random.uniform(0, 1, n_points)) * base_radius
-            x = center[0] + radii * np.cos(angles)
-            y = center[1] + radii * np.sin(angles)
-            return VGroup(*[Dot(point=[xi, yi, 0], color=color, radius=0.05) for xi, yi in zip(x, y)])
+#         self.next_slide()
+#         self.play(map(FadeOut, [lex_email, highlight_0, highlight_1]))
 
 
-        q_1 = Text('Question 1:\nDoes Corpus Affect Performance?', font_size=36)
+# class e_AnovaGraph(Slide):
+#     def construct(self):
+#         def make_blob(n_points, center, color):
+#             base_radius = math.cbrt(n_points*0.15)
+#             angles = np.random.uniform(0, 2*np.pi, n_points)
+#             radii = np.sqrt(np.random.uniform(0, 1, n_points)) * base_radius
+#             x = center[0] + radii * np.cos(angles)
+#             y = center[1] + radii * np.sin(angles)
+#             return VGroup(*[Dot(point=[xi, yi, 0], color=color, radius=0.05) for xi, yi in zip(x, y)])
 
-        anova_name = Text('Analysis Of Variance', font_size=24).shift(UP*3)
-        anova_abr = Text('ANOVA', font_size=24).shift(UP*3)
-        anova_full = MathTex(r'F = \frac{\sum_{j} n_j (\bar{X}_j - \bar{X})^2 / (k-1)}{\sum_{j}\sum_{i} (X_{ij} - \bar{X}_j)^2 / (N-k)}')
-        anova_simple = MathTex(r"F = \frac{Variance\ Between\ Groups}{Variance\ Within\ Groups}")
 
+#         q_1 = Text('Question 1:\nDoes Corpus Affect Performance?', font_size=36)
 
-
-        tukey_name = Text('Tukey-Kramer Pairwise Test', font_size=24).shift(LEFT*1).shift(UP*0.5)
-        tukey_abr = Text('Tukey-Kramer', font_size=24).shift(UP*0.5).shift(LEFT*1)
-        tukey_full = MathTex(r"q = \frac{\bar{X}_i - \bar{X}_j}{\sqrt{\frac{MS_{within}}{2}\left(\frac{1}{n_i} + \frac{1}{n_j}\right)}}").shift(LEFT*1.5).shift(DOWN*1)
-        tukey_simple = Text('Is group 1 different from group 2?', font_size=24).shift(DOWN*1).shift(LEFT*0.7)
-
-        blob_1 = make_blob(25, [-3, 1, 0], PURPLE_C)
-        blob_2 = make_blob(25, [-0.5, 0.5, 0], RED_C)
-        blob_3 = make_blob(25, [-2.5, -1, 0], GOLD_C)
-
-        self.play(Write(q_1))
-        self.next_slide()
-        self.play(FadeOut(q_1))
-        self.play(Write(anova_name))
-        self.play(TransformMatchingShapes(anova_name, anova_abr, transform_mismatches=True))
-        self.next_slide()
-        self.play(Write(anova_full))
-        self.play(TransformMatchingShapes(anova_full, anova_simple, transform_mismatches=True))
-        self.next_slide()
-        self.play(anova_simple.animate.scale(0.5).shift(RIGHT*3).shift(UP*2.3), anova_abr.animate.shift(RIGHT*3))
-        self.play(Write(tukey_name), Write(tukey_full))
-        self.play(TransformMatchingShapes(tukey_full, tukey_simple, transform_mismatches=True))
-        self.next_slide()
-        self.play(TransformMatchingShapes(tukey_name, tukey_abr, transform_mismatches=True))
-        self.play(tukey_abr.animate.shift(RIGHT*4.1), tukey_simple.animate.scale(0.7).shift(RIGHT*4).shift(UP*0.7))
-        self.next_slide()
-        self.play(Create(blob_1), Create(blob_2), Create(blob_3))
-        self.next_slide()
-        self.play(blob_1.animate.shift(DOWN*1).shift(RIGHT*1), blob_2.animate.shift(LEFT*1), blob_3.animate.shift(UP*1).shift(RIGHT*0.5))
-        self.next_slide()
-        self.play(blob_1.animate.move_to([-4, 1.5, 0]), blob_2.animate.move_to([-1, 1, 0]), blob_3.animate.move_to([-3, -2, 0]))
-        self.next_slide()
-        self.play(blob_2.animate.move_to([-3.5, 1, 0]))
-        self.play(blob_2.animate.move_to([-1, 1, 0]))
-        self.play(blob_3.animate.move_to([-4, 1, 0]))
-        self.play(blob_3.animate.move_to([-3, -2, 0]))
-        self.next_slide()
-        self.play(map(FadeOut, [anova_abr, anova_simple, tukey_abr, tukey_simple, blob_1, blob_2, blob_3]))
-
-        corps = ['Markov', 'Enron', 'Zeros', 'Random', 'Contracts']
-        n = len(corps)
-        radius = 2
-
-        dots = VGroup()
-        labels = VGroup()
-        for i, corp in enumerate(corps):
-            angle = (2 * PI * i) / n
-            x = radius * np.cos(angle)
-            y = radius * np.sin(angle)
-            dot = Dot([x, y, 0], color=BLUE)
-            label = Text(corp, font_size=24).next_to(dot, np.array([np.cos(angle), np.sin(angle), 0]), buff=0.2)
-            dots.add(dot)
-            labels.add(label)
-
-        self.play(Create(dots), Write(labels))
-        pentagram = []
-        for pair in combinations([i for i in range(5)], 2):
-            if set(pair) in [{1, 0}, {3, 2}]:
-                pentagram.append(Line(start=dots[pair[0]], end=dots[pair[1]], color=RED))
-            else:
-                pentagram.append(DashedLine(start=dots[pair[0]], end=dots[pair[1]], color='#222222'))
-        self.play(*map(Create, pentagram))
-        self.next_slide()
-        self.play(*map(FadeOut, pentagram + [dots, labels]))
-
-        with open('data/corp_avg_dict.json', 'r') as infile:
-            data = json.load(infile)
-        percent_data = {}
-        for corp in data:
-            corp_dict = {}
-            for size in data[corp]:
-                corp_dict[size] = 100*data[corp][size]/6
-            percent_data[corp] = corp_dict
-        colors = [BLUE, PURPLE, GREEN, RED, YELLOW]
-
-        plot_axes = Axes(
-            x_range=[1, 3, 1],
-            y_range=[0, 100, 10],
-            x_length=9,
-            y_length=5.5,
-            axis_config={"font_size": 24},
-            x_axis_config={
-                "scaling": LogBase(base=10),
-            },
-            y_axis_config={
-                "numbers_to_include": np.arange(0, 100, 10),
-            },
-            tips=False,
-        )
-
-        custom_ticks = [10, 25, 50, 100, 250, 500]
-        tick_labels = VGroup(*[
-            MathTex(str(v), font_size=20).next_to(
-                plot_axes.c2p(v, 0), DOWN, buff=0.2
-            )
-            for v in custom_ticks
-        ])
-
-        title = Title('Aggregated Performance by Corpus', include_underline=False, font_size=40)
-        y_label = plot_axes.get_y_axis_label("Correct\ Answers", edge=LEFT, direction=LEFT)
-        y_label.rotate(PI/2)
-        y_label.shift(LEFT * 0.5)
-        x_label = plot_axes.get_x_axis_label("File\ Set\ Size", edge=DOWN)
-        x_label.shift(DOWN * 0.9)
-        x_label.shift(LEFT * 2)
-        plot_labels = VGroup(x_label, y_label)
-
-        lines = VGroup()
-        for (label, points), color in zip(percent_data.items(), colors):
-            xs = [int(k) for k in points.keys()]
-            ys = list(points.values())
-            line = plot_axes.plot_line_graph(
-                x_values=xs,
-                y_values=ys,
-                line_color=color,
-                add_vertex_dots=True,
-                vertex_dot_radius=0.05,
-            )
-            lines.add(line)
-
-        legend_items = VGroup()
-        for (label, _), color in zip(percent_data.items(), colors):
-            dot = Dot(color=color, radius=0.1)
-            text = Text(label, font_size=20, color=color)
-            text.next_to(dot, RIGHT, buff=0.15)
-            item = VGroup(dot, text)
-            legend_items.add(item)
-
-        legend_items.arrange(DOWN, aligned_edge=LEFT, buff=0.2)
-        legend_box = SurroundingRectangle(legend_items, color=WHITE, buff=0.2)
-        legend = VGroup(legend_box, legend_items)
-        legend.to_corner(UR, buff=0.5)
-
-        self.play(Write(title))
-        self.play(Create(plot_axes), Create(plot_labels), Create(tick_labels), run_time=3)
-        self.next_slide()
-        self.play(Create(legend), Create(lines), run_time=10)
-        self.wait()
+#         anova_name = Text('Analysis Of Variance', font_size=24).shift(UP*3)
+#         anova_abr = Text('ANOVA', font_size=24).shift(UP*3)
+#         anova_full = MathTex(r'F = \frac{\sum_{j} n_j (\bar{X}_j - \bar{X})^2 / (k-1)}{\sum_{j}\sum_{i} (X_{ij} - \bar{X}_j)^2 / (N-k)}')
+#         anova_simple = MathTex(r"F = \frac{Variance\ Between\ Groups}{Variance\ Within\ Groups}")
 
 
 
-class f_Regression(Slide):
+#         tukey_name = Text('Tukey-Kramer Pairwise Test', font_size=24).shift(LEFT*1).shift(UP*0.5)
+#         tukey_abr = Text('Tukey-Kramer', font_size=24).shift(UP*0.5).shift(LEFT*1)
+#         tukey_full = MathTex(r"q = \frac{\bar{X}_i - \bar{X}_j}{\sqrt{\frac{MS_{within}}{2}\left(\frac{1}{n_i} + \frac{1}{n_j}\right)}}").shift(LEFT*1.5).shift(DOWN*1)
+#         tukey_simple = Text('Is group 1 different from group 2?', font_size=24).shift(DOWN*1).shift(LEFT*0.7)
 
-    def construct(self):
-        q2 = Text('Question 2:\nDoes Number of Files Impact Performance?', font_size=36)
-        self.play(Write(q2))
-        self.next_slide()
-        self.play(FadeOut(q2))
+#         blob_1 = make_blob(25, [-3, 1, 0], PURPLE_C)
+#         blob_2 = make_blob(25, [-0.5, 0.5, 0], RED_C)
+#         blob_3 = make_blob(25, [-2.5, -1, 0], GOLD_C)
+
+#         self.play(Write(q_1))
+#         self.next_slide()
+#         self.play(FadeOut(q_1))
+#         self.play(Write(anova_name))
+#         self.play(TransformMatchingShapes(anova_name, anova_abr, transform_mismatches=True))
+#         self.next_slide()
+#         self.play(Write(anova_full))
+#         self.play(TransformMatchingShapes(anova_full, anova_simple, transform_mismatches=True))
+#         self.next_slide()
+#         self.play(anova_simple.animate.scale(0.5).shift(RIGHT*3).shift(UP*2.3), anova_abr.animate.shift(RIGHT*3))
+#         self.play(Write(tukey_name), Write(tukey_full))
+#         self.play(TransformMatchingShapes(tukey_full, tukey_simple, transform_mismatches=True))
+#         self.next_slide()
+#         self.play(TransformMatchingShapes(tukey_name, tukey_abr, transform_mismatches=True))
+#         self.play(tukey_abr.animate.shift(RIGHT*4.1), tukey_simple.animate.scale(0.7).shift(RIGHT*4).shift(UP*0.7))
+#         self.next_slide()
+#         self.play(Create(blob_1), Create(blob_2), Create(blob_3))
+#         self.next_slide()
+#         self.play(blob_1.animate.shift(DOWN*1).shift(RIGHT*1), blob_2.animate.shift(LEFT*1), blob_3.animate.shift(UP*1).shift(RIGHT*0.5))
+#         self.next_slide()
+#         self.play(blob_1.animate.move_to([-4, 1.5, 0]), blob_2.animate.move_to([-1, 1, 0]), blob_3.animate.move_to([-3, -2, 0]))
+#         self.next_slide()
+#         self.play(blob_2.animate.move_to([-3.5, 1, 0]))
+#         self.play(blob_2.animate.move_to([-1, 1, 0]))
+#         self.play(blob_3.animate.move_to([-4, 1, 0]))
+#         self.play(blob_3.animate.move_to([-3, -2, 0]))
+#         self.next_slide()
+#         self.play(map(FadeOut, [anova_abr, anova_simple, tukey_abr, tukey_simple, blob_1, blob_2, blob_3]))
+
+#         corps = ['Markov', 'Enron', 'Zeros', 'Random', 'Contracts']
+#         n = len(corps)
+#         radius = 2
+
+#         dots = VGroup()
+#         labels = VGroup()
+#         for i, corp in enumerate(corps):
+#             angle = (2 * PI * i) / n
+#             x = radius * np.cos(angle)
+#             y = radius * np.sin(angle)
+#             dot = Dot([x, y, 0], color=BLUE)
+#             label = Text(corp, font_size=24).next_to(dot, np.array([np.cos(angle), np.sin(angle), 0]), buff=0.2)
+#             dots.add(dot)
+#             labels.add(label)
+
+#         self.play(Create(dots), Write(labels))
+#         pentagram = []
+#         for pair in combinations([i for i in range(5)], 2):
+#             if set(pair) in [{1, 0}, {3, 2}]:
+#                 pentagram.append(Line(start=dots[pair[0]], end=dots[pair[1]], color=RED))
+#             else:
+#                 pentagram.append(DashedLine(start=dots[pair[0]], end=dots[pair[1]], color='#222222'))
+#         self.play(*map(Create, pentagram))
+#         self.next_slide()
+#         self.play(*map(FadeOut, pentagram + [dots, labels]))
+
+#         with open('data/corp_avg_dict.json', 'r') as infile:
+#             data = json.load(infile)
+#         percent_data = {}
+#         for corp in data:
+#             corp_dict = {}
+#             for size in data[corp]:
+#                 corp_dict[size] = 100*data[corp][size]/6
+#             percent_data[corp] = corp_dict
+#         colors = [BLUE, PURPLE, GREEN, RED, YELLOW]
+
+#         plot_axes = Axes(
+#             x_range=[1, 3, 1],
+#             y_range=[0, 100, 10],
+#             x_length=9,
+#             y_length=5.5,
+#             axis_config={"font_size": 24},
+#             x_axis_config={
+#                 "scaling": LogBase(base=10),
+#             },
+#             y_axis_config={
+#                 "numbers_to_include": np.arange(0, 100, 10),
+#             },
+#             tips=False,
+#         )
+
+#         custom_ticks = [10, 25, 50, 100, 250, 500]
+#         tick_labels = VGroup(*[
+#             MathTex(str(v), font_size=20).next_to(
+#                 plot_axes.c2p(v, 0), DOWN, buff=0.2
+#             )
+#             for v in custom_ticks
+#         ])
+
+#         title = Title('Aggregated Performance by Corpus', include_underline=False, font_size=40)
+#         y_label = plot_axes.get_y_axis_label("Correct\ Answers", edge=LEFT, direction=LEFT)
+#         y_label.rotate(PI/2)
+#         y_label.shift(LEFT * 0.5)
+#         x_label = plot_axes.get_x_axis_label("File\ Set\ Size", edge=DOWN)
+#         x_label.shift(DOWN * 0.9)
+#         x_label.shift(LEFT * 2)
+#         plot_labels = VGroup(x_label, y_label)
+
+#         lines = VGroup()
+#         for (label, points), color in zip(percent_data.items(), colors):
+#             xs = [int(k) for k in points.keys()]
+#             ys = list(points.values())
+#             line = plot_axes.plot_line_graph(
+#                 x_values=xs,
+#                 y_values=ys,
+#                 line_color=color,
+#                 add_vertex_dots=True,
+#                 vertex_dot_radius=0.05,
+#             )
+#             lines.add(line)
+
+#         legend_items = VGroup()
+#         for (label, _), color in zip(percent_data.items(), colors):
+#             dot = Dot(color=color, radius=0.1)
+#             text = Text(label, font_size=20, color=color)
+#             text.next_to(dot, RIGHT, buff=0.15)
+#             item = VGroup(dot, text)
+#             legend_items.add(item)
+
+#         legend_items.arrange(DOWN, aligned_edge=LEFT, buff=0.2)
+#         legend_box = SurroundingRectangle(legend_items, color=WHITE, buff=0.2)
+#         legend = VGroup(legend_box, legend_items)
+#         legend.to_corner(UR, buff=0.5)
+
+#         self.play(Write(title))
+#         self.play(Create(plot_axes), Create(plot_labels), Create(tick_labels), run_time=3)
+#         self.next_slide()
+#         self.play(Create(legend), Create(lines), run_time=10)
+#         self.wait()
+
+
+
+# class f_Regression(Slide):
+
+#     def construct(self):
+#         q2 = Text('Question 2:\nDoes Number of Files Impact Performance?', font_size=36)
+#         self.play(Write(q2))
+#         self.next_slide()
+#         self.play(FadeOut(q2))
         
-        with open('data/fit_stats.json', 'r') as f:
-            data = json.load(f)
-        stats_dict = data['stats_dict']
-        weighted_fit = data['weighted_fit']
+#         with open('data/fit_stats.json', 'r') as f:
+#             data = json.load(f)
+#         stats_dict = data['stats_dict']
+#         weighted_fit = data['weighted_fit']
 
-        corp_colors = [BLUE, RED, GREEN, YELLOW, PURPLE]
-        vendors = list(stats_dict.keys())
+#         corp_colors = [BLUE, RED, GREEN, YELLOW, PURPLE]
+#         vendors = list(stats_dict.keys())
 
-        # exp_decay = MathTex(r"f(x) = ae^{-bx} + c")
+#         # exp_decay = MathTex(r"f(x) = ae^{-bx} + c")
 
-        self._fitting()
+#         self._fitting()
 
-        plot_axes = Axes(
-            x_range=[1, 3, 1],
-            y_range=[0, 100, 10],
-            x_length=9,
-            y_length=5.5,
-            axis_config={"font_size": 24},
-            x_axis_config={"scaling": LogBase(base=10)},
-            y_axis_config={"numbers_to_include": np.arange(0, 101, 10)},
-            tips=False,
-        )
-        custom_ticks = [10, 25, 50, 100, 250, 500]
-        tick_labels = VGroup(*[
-            MathTex(str(v), font_size=20).next_to(plot_axes.c2p(v, 0), DOWN, buff=0.2)
-            for v in custom_ticks
-        ])
-        y_label = plot_axes.get_y_axis_label("\%\ Correct", edge=LEFT, direction=LEFT)
-        y_label.rotate(PI/2).shift(LEFT * 0.5)
-        x_label = plot_axes.get_x_axis_label("Number\ of\ Files", edge=DOWN)
-        x_label.shift(DOWN * 0.9).shift(LEFT * 2)
-        plot_labels = VGroup(x_label, y_label)
-
-
-        self.play(Create(plot_axes), Create(plot_labels), Create(tick_labels))
-
-        for vendor in vendors:
-            self._make_vendor_slide(vendor, stats_dict[vendor], weighted_fit.get(vendor), corp_colors, plot_axes)
-        self.play(*[FadeOut(i) for i in [plot_axes, plot_labels, tick_labels]])
-
-    def _fitting(self):
-        fitting_title = Text('Regression Analysis?', font_size=36)
-        self.play(Write(fitting_title))
-        self.next_slide()
-        self.play(fitting_title.animate.shift(UP*3.5))
-        linx = [i/364 for i in range(0, 365)]
-        liny = [i/364 for i in range(0, 365)]
-        lin_title = Text('Widget Factory', font_size=30)
-        lin_eq = MathTex(r"f(x) = mx + b").shift(LEFT*2) 
-        lin_y_lab = Text('# of Widgets', font_size = 20).rotate(90 * DEGREES)
-        lin_x_lab = Text('Time', font_size = 20)
-
-        a = 0.0241 ; b = 3.6706
-
-        scap = 0 ; ecap = 223
-        expx = [i / ecap for i in range(scap, ecap)]
-        expy = [a * np.exp(b * i/ecap) for i in range(scap, ecap)]
-        exp_title = Text('Widget Factory Factory', font_size=30)
-        exp_eq = MathTex(r"g(x) = a^x+b").shift(LEFT*2)
-
-        with open('data/population.filtered/population.csv', 'r') as infile:
-            pop_df = pd.read_csv(infile)
-        popx = pop_df['Year'].to_list()
-        popx = [(i-1800)/(max(popx)-1800) for i in popx]
-        popy = pop_df['Population'].to_list()
-        popy = [i/max(popy) for i in popy]
-        pop_title = Text('Cambodia\'s Population since 1800', font_size=36)
-        pop_eq = MathTex(r"P = P_0 e^{kt}").shift(LEFT*2)
-        pop_y_lab = Text('# of People', font_size = 20).rotate(90 * DEGREES)
-
-        plot_axes = Axes(
-            x_range=[0, 1, 0.25],
-            y_range=[0, 1, 0.25],
-            x_length=8,
-            y_length=5,
-            axis_config={"font_size": 24},
-            tips=False,
-        ).shift(DOWN*1)
-
-        lin_graph = plot_axes.plot_line_graph(x_values=linx, 
-                                          y_values=liny, 
-                                          line_color=BLUE,
-                                          add_vertex_dots=False)
-        lin_title.next_to(lin_graph, UP, buff=0.2)
-        lin_x_lab.next_to(lin_graph, DOWN, buff=0.2)
-        lin_y_lab.next_to(lin_graph, LEFT, buff=0.2)
-        exp_graph = plot_axes.plot_line_graph(x_values=expx, 
-                                          y_values=expy, 
-                                          line_color=BLUE, 
-                                          add_vertex_dots=False)
-        exp_title.next_to(exp_graph, UP, buff=0.2)
-        lin_x_lab.next_to(lin_graph, DOWN, buff=0.2).rotate
-        lin_y_lab.next_to(lin_graph, LEFT, buff=0.2)
-        pop_graph = plot_axes.plot_line_graph(x_values=popx, 
-                                          y_values=popy, 
-                                          line_color=GREEN, 
-                                          add_vertex_dots=False)
-        pop_title.next_to(pop_graph, UP, buff=0.2)
-        pop_y_lab.next_to(lin_graph, LEFT, buff=0.2)
-        lin_x_lab.next_to(lin_graph, DOWN, buff=0.2)
-
-        self.play(Create(lin_graph), Create(plot_axes), Write(lin_title), Write(lin_x_lab), Write(lin_y_lab))
-        self.next_slide()
-        self.play(Write(lin_eq))
-        self.next_slide()    
-        self.play(TransformMatchingShapes(lin_title, exp_title, transform_mismatches=True))
-        self.play(TransformMatchingShapes(lin_eq, exp_eq, transform_mismatches=True))
-        self.play(TransformMatchingShapes(lin_graph, exp_graph, transform_mismatches=True))
-        self.next_slide()
-        self.play(TransformMatchingShapes(exp_title, pop_title, transform_mismatches=True))
-        self.play(TransformMatchingShapes(exp_eq, pop_eq, transform_mismatches=True))
-        self.play(FadeIn(pop_graph), TransformMatchingShapes(lin_y_lab, pop_y_lab, transform_mismatches=True))
-        self.next_slide()
-        self.play(map(FadeOut, [pop_graph,
-                                pop_eq, 
-                                pop_title, 
-                                fitting_title, 
-                                exp_graph,
-                                pop_y_lab,
-                                lin_x_lab, 
-                                plot_axes]))
+#         plot_axes = Axes(
+#             x_range=[1, 3, 1],
+#             y_range=[0, 100, 10],
+#             x_length=9,
+#             y_length=5.5,
+#             axis_config={"font_size": 24},
+#             x_axis_config={"scaling": LogBase(base=10)},
+#             y_axis_config={"numbers_to_include": np.arange(0, 101, 10)},
+#             tips=False,
+#         )
+#         custom_ticks = [10, 25, 50, 100, 250, 500]
+#         tick_labels = VGroup(*[
+#             MathTex(str(v), font_size=20).next_to(plot_axes.c2p(v, 0), DOWN, buff=0.2)
+#             for v in custom_ticks
+#         ])
+#         y_label = plot_axes.get_y_axis_label("\%\ Correct", edge=LEFT, direction=LEFT)
+#         y_label.rotate(PI/2).shift(LEFT * 0.5)
+#         x_label = plot_axes.get_x_axis_label("Number\ of\ Files", edge=DOWN)
+#         x_label.shift(DOWN * 0.9).shift(LEFT * 2)
+#         plot_labels = VGroup(x_label, y_label)
 
 
-    def _make_vendor_slide(self, vendor, vendor_dict, fit, corp_colors, plot_axes):
-        title = Title(f'{vendor} — Mean by Corpus', include_underline=False, font_size=36)
-        lines = VGroup()
-        legend_items = VGroup()
-        for (corp, d), color in zip(vendor_dict.items(), corp_colors):
-            xs = [int(k) for k in d.keys()]
-            ys = [(d[k]['mean'] / 6) * 100 for k in d.keys()]
-            line = plot_axes.plot_line_graph(
-                x_values=xs,
-                y_values=ys,
-                line_color=color,
-                add_vertex_dots=True,
-                vertex_dot_radius=0.05,
-            )
-            lines.add(line)
+#         self.play(Create(plot_axes), Create(plot_labels), Create(tick_labels))
 
-            dot = Dot(color=color, radius=0.08)
-            text = Text(corp, font_size=18, color=color).next_to(dot, RIGHT, buff=0.15)
-            legend_items.add(VGroup(dot, text))
+#         for vendor in vendors:
+#             self._make_vendor_slide(vendor, stats_dict[vendor], weighted_fit.get(vendor), corp_colors, plot_axes)
+#         self.play(*[FadeOut(i) for i in [plot_axes, plot_labels, tick_labels]])
 
-        legend_items.arrange(DOWN, aligned_edge=LEFT, buff=0.2)
-        legend_box = SurroundingRectangle(legend_items, color=WHITE, buff=0.2, fill_opacity=0)
-        legend = VGroup(legend_box, legend_items).to_corner(UR, buff=0.5)
+#     def _fitting(self):
+#         fitting_title = Text('Regression Analysis?', font_size=36)
+#         self.play(Write(fitting_title))
+#         self.next_slide()
+#         self.play(fitting_title.animate.shift(UP*3.5))
+#         linx = [i/364 for i in range(0, 365)]
+#         liny = [i/364 for i in range(0, 365)]
+#         lin_title = Text('Widget Factory', font_size=30)
+#         lin_eq = MathTex(r"f(x) = mx + b").shift(LEFT*2) 
+#         lin_y_lab = Text('# of Widgets', font_size = 20).rotate(90 * DEGREES)
+#         lin_x_lab = Text('Time', font_size = 20)
 
-        # exponential decay fit
-        fit_line = None
-        r2_label = None
-        if fit:
-            a, b, c, r2 = float(fit['a']), float(fit['b']), float(fit['c']), float(fit['R2'])
-            # scale fit to percent
-            a_pct = a * (100 / 6)
-            c_pct = c * (100 / 6)
-            xs_fit = list(range(10, 501, 10))
-            ys_fit = [float(np.clip(a_pct * np.exp(-b * x) + c_pct, 0, 100)) for x in xs_fit]
-            fit_curve = plot_axes.plot_line_graph(
-                x_values=xs_fit,
-                y_values=ys_fit,
-                line_color=WHITE,
-                add_vertex_dots=False,
-                stroke_width=3,
-            )
-            fit_line = DashedVMobject(fit_curve["line_graph"], num_dashes=30)
-            r2_label = MathTex(rf"R^2 = {r2:.3f}", font_size=24).to_corner(DL, buff=0.5)
+#         a = 0.0241 ; b = 3.6706
 
-        # animate
-        self.play(Write(title))
-        # self.play(Create(plot_axes), Create(plot_labels), Create(tick_labels), run_time=3)
-        self.play(Create(lines), Create(legend), run_time=3)
-        self.next_slide()
-        if fit_line:
-            self.play(lines.animate.set_stroke(opacity=0.5), run_time=1)
-            self.play(Create(fit_line), Write(r2_label), run_time=3,)
-            self.next_slide()
+#         scap = 0 ; ecap = 223
+#         expx = [i / ecap for i in range(scap, ecap)]
+#         expy = [a * np.exp(b * i/ecap) for i in range(scap, ecap)]
+#         exp_title = Text('Widget Factory Factory', font_size=30)
+#         exp_eq = MathTex(r"g(x) = a^x+b").shift(LEFT*2)
 
-        # fade out for next vendor
-        # to_fade = VGroup(title, plot_axes, plot_labels, tick_labels, lines, legend)
-        to_fade = VGroup(title, lines, legend)
-        if fit_line:
-            to_fade.add(fit_line, r2_label)
-        self.play(FadeOut(to_fade))
+#         with open('data/population.filtered/population.csv', 'r') as infile:
+#             pop_df = pd.read_csv(infile)
+#         popx = pop_df['Year'].to_list()
+#         popx = [(i-1800)/(max(popx)-1800) for i in popx]
+#         popy = pop_df['Population'].to_list()
+#         popy = [i/max(popy) for i in popy]
+#         pop_title = Text('Cambodia\'s Population since 1800', font_size=36)
+#         pop_eq = MathTex(r"P = P_0 e^{kt}").shift(LEFT*2)
+#         pop_y_lab = Text('# of People', font_size = 20).rotate(90 * DEGREES)
+
+#         plot_axes = Axes(
+#             x_range=[0, 1, 0.25],
+#             y_range=[0, 1, 0.25],
+#             x_length=8,
+#             y_length=5,
+#             axis_config={"font_size": 24},
+#             tips=False,
+#         ).shift(DOWN*1)
+
+#         lin_graph = plot_axes.plot_line_graph(x_values=linx, 
+#                                           y_values=liny, 
+#                                           line_color=BLUE,
+#                                           add_vertex_dots=False)
+#         lin_title.next_to(lin_graph, UP, buff=0.2)
+#         lin_x_lab.next_to(lin_graph, DOWN, buff=0.2)
+#         lin_y_lab.next_to(lin_graph, LEFT, buff=0.2)
+#         exp_graph = plot_axes.plot_line_graph(x_values=expx, 
+#                                           y_values=expy, 
+#                                           line_color=BLUE, 
+#                                           add_vertex_dots=False)
+#         exp_title.next_to(exp_graph, UP, buff=0.2)
+#         lin_x_lab.next_to(lin_graph, DOWN, buff=0.2).rotate
+#         lin_y_lab.next_to(lin_graph, LEFT, buff=0.2)
+#         pop_graph = plot_axes.plot_line_graph(x_values=popx, 
+#                                           y_values=popy, 
+#                                           line_color=GREEN, 
+#                                           add_vertex_dots=False)
+#         pop_title.next_to(pop_graph, UP, buff=0.2)
+#         pop_y_lab.next_to(lin_graph, LEFT, buff=0.2)
+#         lin_x_lab.next_to(lin_graph, DOWN, buff=0.2)
+
+#         self.play(Create(lin_graph), Create(plot_axes), Write(lin_title), Write(lin_x_lab), Write(lin_y_lab))
+#         self.next_slide()
+#         self.play(Write(lin_eq))
+#         self.next_slide()    
+#         self.play(TransformMatchingShapes(lin_title, exp_title, transform_mismatches=True))
+#         self.play(TransformMatchingShapes(lin_eq, exp_eq, transform_mismatches=True))
+#         self.play(TransformMatchingShapes(lin_graph, exp_graph, transform_mismatches=True))
+#         self.next_slide()
+#         self.play(TransformMatchingShapes(exp_title, pop_title, transform_mismatches=True))
+#         self.play(TransformMatchingShapes(exp_eq, pop_eq, transform_mismatches=True))
+#         self.play(FadeIn(pop_graph), TransformMatchingShapes(lin_y_lab, pop_y_lab, transform_mismatches=True))
+#         self.next_slide()
+#         self.play(map(FadeOut, [pop_graph,
+#                                 pop_eq, 
+#                                 pop_title, 
+#                                 fitting_title, 
+#                                 exp_graph,
+#                                 pop_y_lab,
+#                                 lin_x_lab, 
+#                                 plot_axes]))
+
+
+#     def _make_vendor_slide(self, vendor, vendor_dict, fit, corp_colors, plot_axes):
+#         title = Title(f'{vendor} — Mean by Corpus', include_underline=False, font_size=36)
+#         lines = VGroup()
+#         legend_items = VGroup()
+#         for (corp, d), color in zip(vendor_dict.items(), corp_colors):
+#             xs = [int(k) for k in d.keys()]
+#             ys = [(d[k]['mean'] / 6) * 100 for k in d.keys()]
+#             line = plot_axes.plot_line_graph(
+#                 x_values=xs,
+#                 y_values=ys,
+#                 line_color=color,
+#                 add_vertex_dots=True,
+#                 vertex_dot_radius=0.05,
+#             )
+#             lines.add(line)
+
+#             dot = Dot(color=color, radius=0.08)
+#             text = Text(corp, font_size=18, color=color).next_to(dot, RIGHT, buff=0.15)
+#             legend_items.add(VGroup(dot, text))
+
+#         legend_items.arrange(DOWN, aligned_edge=LEFT, buff=0.2)
+#         legend_box = SurroundingRectangle(legend_items, color=WHITE, buff=0.2, fill_opacity=0)
+#         legend = VGroup(legend_box, legend_items).to_corner(UR, buff=0.5)
+
+#         # exponential decay fit
+#         fit_line = None
+#         r2_label = None
+#         if fit:
+#             a, b, c, r2 = float(fit['a']), float(fit['b']), float(fit['c']), float(fit['R2'])
+#             # scale fit to percent
+#             a_pct = a * (100 / 6)
+#             c_pct = c * (100 / 6)
+#             xs_fit = list(range(10, 501, 10))
+#             ys_fit = [float(np.clip(a_pct * np.exp(-b * x) + c_pct, 0, 100)) for x in xs_fit]
+#             fit_curve = plot_axes.plot_line_graph(
+#                 x_values=xs_fit,
+#                 y_values=ys_fit,
+#                 line_color=WHITE,
+#                 add_vertex_dots=False,
+#                 stroke_width=3,
+#             )
+#             fit_line = DashedVMobject(fit_curve["line_graph"], num_dashes=30)
+#             r2_label = MathTex(rf"R^2 = {r2:.3f}", font_size=24).to_corner(DL, buff=0.5)
+
+#         # animate
+#         self.play(Write(title))
+#         # self.play(Create(plot_axes), Create(plot_labels), Create(tick_labels), run_time=3)
+#         self.play(Create(lines), Create(legend), run_time=3)
+#         self.next_slide()
+#         if fit_line:
+#             self.play(lines.animate.set_stroke(opacity=0.5), run_time=1)
+#             self.play(Create(fit_line), Write(r2_label), run_time=3,)
+#             self.next_slide()
+
+#         # fade out for next vendor
+#         # to_fade = VGroup(title, plot_axes, plot_labels, tick_labels, lines, legend)
+#         to_fade = VGroup(title, lines, legend)
+#         if fit_line:
+#             to_fade.add(fit_line, r2_label)
+#         self.play(FadeOut(to_fade))
 
 
 
-class g_Conclusion(Slide, ThreeDScene):
-    def construct(self):
-        self._further()
+# class g_Conclusion(Slide, ThreeDScene):
+#     def construct(self):
+#         self._further()
 
-        conc = Text(' V. Conclusions', font_size=36)
-        conc = VGroup(conc, draw_box(conc))
-        q1 = Text('1. Does Corpus Affect Performance?', font_size=24).shift(UP*1).shift(LEFT*2.5)
-        a1 = Text('Yes', font_size=24).shift(UP*0.5).shift(RIGHT*2)
-        q2 = Text('2. Does Number of Files Impact\nPerformance?', font_size=24).shift(DOWN*1).shift(LEFT*2.5)
-        a2 = Text('Yes regarding Lexis\nand Westlaw, no regarding\nHarvey', font_size=24).shift(DOWN*2.5).shift(RIGHT*2)
+#         conc = Text(' V. Conclusions', font_size=36)
+#         conc = VGroup(conc, draw_box(conc))
+#         q1 = Text('1. Does Corpus Affect Performance?', font_size=24).shift(UP*1).shift(LEFT*2.5)
+#         a1 = Text('Yes', font_size=24).shift(UP*0.5).shift(RIGHT*2)
+#         q2 = Text('2. Does Number of Files Impact\nPerformance?', font_size=24).shift(DOWN*1).shift(LEFT*2.5)
+#         a2 = Text('Yes regarding Lexis\nand Westlaw, no regarding\nHarvey', font_size=24).shift(DOWN*2.5).shift(RIGHT*2)
 
-        self.play(FadeIn(conc))
-        self.next_slide()
-        self.play(FadeOut(conc), Write(q1))
-        self.next_slide()
-        self.play(Write(a1))
-        self.next_slide()
-        self.play(Write(q2))
-        self.next_slide()
-        self.play(Write(a2))
+#         self.play(FadeIn(conc))
+#         self.next_slide()
+#         self.play(FadeOut(conc), Write(q1))
+#         self.next_slide()
+#         self.play(Write(a1))
+#         self.next_slide()
+#         self.play(Write(q2))
+#         self.next_slide()
+#         self.play(Write(a2))
 
-        questions = Text('Thank you!\nQuestions?', font_size=24)
-        self.next_slide()
-        self.play(map(FadeOut, [q1, q2, a1, a2]), Write(questions))
+#         questions = Text('Thank you!\nQuestions?', font_size=24)
+#         self.next_slide()
+#         self.play(map(FadeOut, [q1, q2, a1, a2]), Write(questions))
 
-    def _further(self):
-        discussion_title = VGroup(Text('IV. Discussion', font_size=36))
-        discussion_title += draw_box(discussion_title)
-        self.play(Write(discussion_title[0]), Create(discussion_title[1]))
-        self.play(discussion_title.animate.shift(UP*3.5).shift(LEFT*2))
-        parallelization = Text('1. Parallelization', font_size=24)
-        self.play(Write(parallelization.next_to(discussion_title, RIGHT)))
-        serial = VGroup(map(lambda x: Text(x, font_size=20), ['• Fixed compute requirement', 
-        '• Low overhead', 
-        '• High task complexity',
-        '• Necessary for dependant conditions',
-        '• Time scales with inputs'])).arrange(DOWN, aligned_edge=LEFT).shift(LEFT*2).shift(UP*1.2)
-        parallel = VGroup(map(lambda x: Text(x, font_size=20), ['• Flexible compute requirement', 
-        '• High overhead', 
-        '• Low task complexity',
-        '• Good for independant cases',
-        '• Constant(ish) time'])).arrange(DOWN, aligned_edge=LEFT).shift(LEFT*3).shift(UP*1)
-        dots = VGroup(*[Dot([-3, 2-(0.7*i), 0], radius=0.2, fill_opacity=1, color=GREEN) for i in range(8)])
-        comp = Rectangle(height=0.5, width=0.5, fill_opacity=1, color=ORANGE).shift(DOWN*0.45).shift(RIGHT*0.21)
-        self.play(Create(dots))
-        self.play(Create(comp))
-        self.play(dots.animate.rotate(90*DEGREES))
-        self.play(Write(serial))
-        for i in range(9):
-            self.play(dots.animate.shift(RIGHT*0.7))
-        self.next_slide()
-        self.play(dots.animate.rotate(-90*DEGREES))
-        self.play(FadeOut(serial))
-        self.play(dots.animate.shift(LEFT*5.6))
-        comps = VGroup([Rectangle(height=0.5, width=0.5, fill_opacity=1, color=ORANGE).move_to([1, 2-(0.7*i),0]) for i in range(8)])
-        self.play(TransformMatchingShapes(comp, comps)) 
-        self.play(dots.animate.shift(RIGHT*6), run_time=5)
-        self.play(Write(parallel))
-        self.next_slide()
-        self.play(map(FadeOut, [dots, comps, parallel]))
+#     def _further(self):
+#         discussion_title = VGroup(Text('IV. Discussion', font_size=36))
+#         discussion_title += draw_box(discussion_title)
+#         self.play(Write(discussion_title[0]), Create(discussion_title[1]))
+#         self.play(discussion_title.animate.shift(UP*3.5).shift(LEFT*2))
+#         parallelization = Text('1. Parallelization', font_size=24)
+#         self.play(Write(parallelization.next_to(discussion_title, RIGHT)))
+#         serial = VGroup(map(lambda x: Text(x, font_size=20), ['• Fixed compute requirement', 
+#         '• Low overhead', 
+#         '• High task complexity',
+#         '• Necessary for dependant conditions',
+#         '• Time scales with inputs'])).arrange(DOWN, aligned_edge=LEFT).shift(LEFT*2).shift(UP*1.2)
+#         parallel = VGroup(map(lambda x: Text(x, font_size=20), ['• Flexible compute requirement', 
+#         '• High overhead', 
+#         '• Low task complexity',
+#         '• Good for independant cases',
+#         '• Constant(ish) time'])).arrange(DOWN, aligned_edge=LEFT).shift(LEFT*3).shift(UP*1)
+#         dots = VGroup(*[Dot([-3, 2-(0.7*i), 0], radius=0.2, fill_opacity=1, color=GREEN) for i in range(8)])
+#         comp = Rectangle(height=0.5, width=0.5, fill_opacity=1, color=ORANGE).shift(DOWN*0.45).shift(RIGHT*0.21)
+#         self.play(Create(dots))
+#         self.play(Create(comp))
+#         self.play(dots.animate.rotate(90*DEGREES))
+#         self.play(Write(serial))
+#         for i in range(9):
+#             self.play(dots.animate.shift(RIGHT*0.7))
+#         self.next_slide()
+#         self.play(dots.animate.rotate(-90*DEGREES))
+#         self.play(FadeOut(serial))
+#         self.play(dots.animate.shift(LEFT*5.6))
+#         comps = VGroup([Rectangle(height=0.5, width=0.5, fill_opacity=1, color=ORANGE).move_to([1, 2-(0.7*i),0]) for i in range(8)])
+#         self.play(TransformMatchingShapes(comp, comps)) 
+#         self.play(dots.animate.shift(RIGHT*6), run_time=5)
+#         self.play(Write(parallel))
+#         self.next_slide()
+#         self.play(map(FadeOut, [dots, comps, parallel]))
 
-        non_lin = Text('2. Non-linear Retrieval', font_size=24).next_to(discussion_title, RIGHT)
-        self.play(TransformMatchingShapes(parallelization, non_lin, transform_mismatches=True))
-        problem = VGroup(*[Text(i, font_size=18) for i in ['Clues:',
-                                                           '{x} and {y} do not both know of {topic}', 
-                                                           '{y} knows of {topic}']])
-        problem.arrange(DOWN, aligned_edge=LEFT, buff=0.5).shift(UP*1)
-        question = Text('Q: does {x} know of {topic}?', font_size=18).next_to(problem, LEFT, buff=1)
+#         non_lin = Text('2. Non-linear Retrieval', font_size=24).next_to(discussion_title, RIGHT)
+#         self.play(TransformMatchingShapes(parallelization, non_lin, transform_mismatches=True))
+#         problem = VGroup(*[Text(i, font_size=18) for i in ['Clues:',
+#                                                            '{x} and {y} do not both know of {topic}', 
+#                                                            '{y} knows of {topic}']])
+#         problem.arrange(DOWN, aligned_edge=LEFT, buff=0.5).shift(UP*1)
+#         question = Text('Q: does {x} know of {topic}?', font_size=18).next_to(problem, LEFT, buff=1)
 
-        colors = [BLUE, GREEN, YELLOW, RED, PURPLE, WHITE, GRAY]
-        docs = VGroup()
-        for i in range(4):
-            for j in range(4):
-                doc = Rectangle(height=0.3, width=0.3, fill_opacity=0, color=random.choice(colors))
-                docs.add(doc.shift(RIGHT*i*0.5).shift(DOWN*j*0.5))
+#         colors = [BLUE, GREEN, YELLOW, RED, PURPLE, WHITE, GRAY]
+#         docs = VGroup()
+#         for i in range(4):
+#             for j in range(4):
+#                 doc = Rectangle(height=0.3, width=0.3, fill_opacity=0, color=random.choice(colors))
+#                 docs.add(doc.shift(RIGHT*i*0.5).shift(DOWN*j*0.5))
 
-        self.play(Write(problem))
-        self.play(Write(question))
-        self.next_slide()
-        self.play(Create(docs.shift(DOWN*1)))
+#         self.play(Write(problem))
+#         self.play(Write(question))
+#         self.next_slide()
+#         self.play(Create(docs.shift(DOWN*1)))
 
-        arrow_1 = CurvedArrow(start_point=question.get_bottom()+DOWN*0.2,
-                            end_point=docs.get_left()+LEFT*0.2,
-                            # angle=-PI/3,
-                            tip_length=0.5)
-        x_lab = Text('{x}', font_size=24).next_to(arrow_1, DOWN, buff=0.1)
+#         arrow_1 = CurvedArrow(start_point=question.get_bottom()+DOWN*0.2,
+#                             end_point=docs.get_left()+LEFT*0.2,
+#                             # angle=-PI/3,
+#                             tip_length=0.5)
+#         x_lab = Text('{x}', font_size=24).next_to(arrow_1, DOWN, buff=0.1)
         
-        arrow_2 = Arrow(start=docs.get_top(),
-                            end=problem.get_bottom(),
-                            tip_length=0.5)
-        arrow_3 = Arrow(end=docs.get_top(),
-                            start=problem.get_bottom(),
-                            tip_length=0.5).next_to(arrow_2, LEFT, buff=0.02)
-        y_lab = Text('{x}, {y}', font_size=24).next_to(arrow_2, RIGHT, buff=0.2)
+#         arrow_2 = Arrow(start=docs.get_top(),
+#                             end=problem.get_bottom(),
+#                             tip_length=0.5)
+#         arrow_3 = Arrow(end=docs.get_top(),
+#                             start=problem.get_bottom(),
+#                             tip_length=0.5).next_to(arrow_2, LEFT, buff=0.02)
+#         y_lab = Text('{x}, {y}', font_size=24).next_to(arrow_2, RIGHT, buff=0.2)
         
-        ans = Text('No', font_size=24).shift(RIGHT*4).shift(DOWN*2)
+#         ans = Text('No', font_size=24).shift(RIGHT*4).shift(DOWN*2)
 
-        arrow_4 = CurvedArrow(start_point=problem.get_right()+RIGHT*0.2,
-                            end_point=ans.get_top()+UP*0.2,
-                            angle=-PI/3,
-                            tip_length=0.5)
+#         arrow_4 = CurvedArrow(start_point=problem.get_right()+RIGHT*0.2,
+#                             end_point=ans.get_top()+UP*0.2,
+#                             angle=-PI/3,
+#                             tip_length=0.5)
 
-        self.play(Create(arrow_1))
-        self.play(Write(x_lab))
-        self.next_slide()
-        self.play(Create(arrow_2), Create(arrow_3), Write(y_lab))
-        self.play(problem[2].animate.set_opacity(0.3))
-        self.next_slide()
-        self.play(Create(ans), Create(arrow_4))
-        self.next_slide()
-        self.play(map(FadeOut, [problem, 
-                                question, 
-                                docs, 
-                                arrow_1, 
-                                arrow_2, 
-                                x_lab, 
-                                y_lab, 
-                                ans, 
-                                arrow_3, 
-                                arrow_4,
-                                discussion_title,
-                                non_lin]))
+#         self.play(Create(arrow_1))
+#         self.play(Write(x_lab))
+#         self.next_slide()
+#         self.play(Create(arrow_2), Create(arrow_3), Write(y_lab))
+#         self.play(problem[2].animate.set_opacity(0.3))
+#         self.next_slide()
+#         self.play(Create(ans), Create(arrow_4))
+#         self.next_slide()
+#         self.play(map(FadeOut, [problem, 
+#                                 question, 
+#                                 docs, 
+#                                 arrow_1, 
+#                                 arrow_2, 
+#                                 x_lab, 
+#                                 y_lab, 
+#                                 ans, 
+#                                 arrow_3, 
+#                                 arrow_4,
+#                                 discussion_title,
+#                                 non_lin]))
 
         
 
