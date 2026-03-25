@@ -1,6 +1,6 @@
 # This file is used internally by FFMPEG.
-file 'file:/media/saltlick/Totoro/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/d_Results/1987512680_65475680_223132457.mp4'
-file 'file:/media/saltlick/Totoro/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/d_Results/2538612922_3936557365_2023860264.mp4'
-file 'file:/media/saltlick/Totoro/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/d_Results/2538612922_231324199_223132457.mp4'
-file 'file:/media/saltlick/Totoro/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/d_Results/2538612922_4184562456_2564795919.mp4'
-file 'file:/media/saltlick/Totoro/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/d_Results/2538612922_956386359_2876613123.mp4'
+file 'file:/Users/thejustintung/Desktop/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/d_Results/1987512680_65475680_223132457.mp4'
+file 'file:/Users/thejustintung/Desktop/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/d_Results/2538612922_3936557365_2023860264.mp4'
+file 'file:/Users/thejustintung/Desktop/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/d_Results/2538612922_231324199_223132457.mp4'
+file 'file:/Users/thejustintung/Desktop/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/d_Results/2538612922_4184562456_2564795919.mp4'
+file 'file:/Users/thejustintung/Desktop/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/d_Results/2538612922_956386359_2876613123.mp4'

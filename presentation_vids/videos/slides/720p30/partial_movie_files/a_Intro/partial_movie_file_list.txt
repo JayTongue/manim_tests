@@ -1,4 +1,4 @@
 # This file is used internally by FFMPEG.
-file 'file:/media/saltlick/Totoro/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/a_Intro/1987512680_3281503193_223132457.mp4'
-file 'file:/media/saltlick/Totoro/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/a_Intro/2538612922_1379060840_3546000940.mp4'
-file 'file:/media/saltlick/Totoro/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/a_Intro/2538612922_3140153383_2565434123.mp4'
+file 'file:/Users/thejustintung/Desktop/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/a_Intro/1987512680_3281503193_223132457.mp4'
+file 'file:/Users/thejustintung/Desktop/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/a_Intro/2538612922_1379060840_3546000940.mp4'
+file 'file:/Users/thejustintung/Desktop/programming/manim_tests/presentation_vids/videos/slides/720p30/partial_movie_files/a_Intro/2538612922_3140153383_2565434123.mp4'
