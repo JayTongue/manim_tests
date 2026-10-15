@@ -5,8 +5,8 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "manim>=0.20.1",
-    "manim-slides>=5.5.4",
+    "manim==0.21.0",
+    "manim-slides[manim]>=5.5.4",
     "matplotlib>=3.10.8",
     "pandas>=3.0.1",
 ]

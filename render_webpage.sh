@@ -5,5 +5,5 @@ echo "Rendering scenes: $SCENES"
 # manim -qm slides.py $SCENES
 # manim-slides convert $SCENES slides.html
 
-manim -qh slides.py $SCENES
-manim-slides convert --one-file $SCENES one_shot_slides.html
+manim -qh biddle_slides.py $SCENES
+manim-slides convert --one-file $SCENES biddle_slides.html

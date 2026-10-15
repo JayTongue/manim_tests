@@ -9,8 +9,10 @@
       "dedent_notes": true,
       "skip_animations": false,
       "src": null,
-      "file": "slides/files/d_Results/5fdfac6c1d57b2d7a0327feed4395c48c2b7a1a385e6b82affeef59eab38fcab.mp4",
-      "rev_file": "slides/files/d_Results/5fdfac6c1d57b2d7a0327feed4395c48c2b7a1a385e6b82affeef59eab38fcab_reversed.mp4"
+      "type": "video",
+      "direction": "horizontal",
+      "file": "slides/files/d_Results/ae4fda7068557f5c.mp4",
+      "rev_file": "slides/files/d_Results/ae4fda7068557f5c_reversed.mp4"
     },
     {
       "loop": false,
@@ -21,8 +23,10 @@
       "dedent_notes": true,
       "skip_animations": false,
       "src": null,
-      "file": "slides/files/d_Results/fd2be6a6132401f35c943655e10886c0b5451f2216a7991cf3f5eab38f018397.mp4",
-      "rev_file": "slides/files/d_Results/fd2be6a6132401f35c943655e10886c0b5451f2216a7991cf3f5eab38f018397_reversed.mp4"
+      "type": "video",
+      "direction": "horizontal",
+      "file": "slides/files/d_Results/b0aa4f8a9e1db066.mp4",
+      "rev_file": "slides/files/d_Results/b0aa4f8a9e1db066_reversed.mp4"
     },
     {
       "loop": false,
@@ -33,8 +37,10 @@
       "dedent_notes": true,
       "skip_animations": false,
       "src": null,
-      "file": "slides/files/d_Results/31d8c49eb36490d15a0a52fd46a83247972b7c01f251f0847075284d2f7c86ab.mp4",
-      "rev_file": "slides/files/d_Results/31d8c49eb36490d15a0a52fd46a83247972b7c01f251f0847075284d2f7c86ab_reversed.mp4"
+      "type": "video",
+      "direction": "horizontal",
+      "file": "slides/files/d_Results/1c129a97d1893635.mp4",
+      "rev_file": "slides/files/d_Results/1c129a97d1893635_reversed.mp4"
     },
     {
       "loop": false,
@@ -45,8 +51,10 @@
       "dedent_notes": true,
       "skip_animations": false,
       "src": null,
-      "file": "slides/files/d_Results/71c9a49c450777028090b151c54f3202a7b3e1848200825026cf8cd2f4730d10.mp4",
-      "rev_file": "slides/files/d_Results/71c9a49c450777028090b151c54f3202a7b3e1848200825026cf8cd2f4730d10_reversed.mp4"
+      "type": "video",
+      "direction": "horizontal",
+      "file": "slides/files/d_Results/17a81c8e227b5e1d.mp4",
+      "rev_file": "slides/files/d_Results/17a81c8e227b5e1d_reversed.mp4"
     }
   ],
   "resolution": [

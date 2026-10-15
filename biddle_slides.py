@@ -18,7 +18,7 @@ def draw_box(text, color=WHITE, buff=0.2):
 
 class a_Intro(Slide):
     def construct(self):
-        title = Text('Retrieval Capabilities of Legal AI Tools', font_size=56)
+        title = Text('Retrieval Capabilities\nof Legal AI Tools', font_size=56)
         title.shift(UP*1)
         
         bio = VGroup(map(lambda x: Text(x, font_size=24), ['Justin Tung',
@@ -41,7 +41,7 @@ class b_Why(Slide):
         self.play(Write(warning))
         self.next_slide()
         self.play(FadeOut(warning))
-        text_1 = Text('I. What is this project\nand why does it matter?', font_size=36)
+        text_1 = Text('I. What is this research\nand why does it matter?', font_size=36)
         text_1.move_to(ORIGIN)
         
         text_2 = Text('1. Vendor Claims', font_size=24)
@@ -80,7 +80,7 @@ class b_Why(Slide):
 
         text_3 = Text('2. Developing Use Guidelines', font_size=24)
 
-        bullets = ['• Wat can my organization use legal AI for?', 
+        bullets = ['• Were can my organization use legal AI?', 
                    '• What are best practices for legal AI use?', 
                    '• What is the likely outcome of these use instances?', 
                    '• When do the upsides of this use outweigh the downsides?']
@@ -111,8 +111,10 @@ class c_Methodology(Slide, ThreeDScene):
         self.next_slide()
         self.play(TransformMatchingShapes(prod_title, prods, transform_mismatches=True)) 
         self.play(prods.animate.shift(UP*3.5), Write(products))
+        caveat = Text('* This research was conducted in Jan/Feb of 2026', font_size=12).shift(DOWN*3, RIGHT*3)
+        self.play(Write(caveat))
         self.next_slide()
-        self.play(map(FadeOut, [prods, products])),
+        self.play(map(FadeOut, [prods, products, caveat])),
 
         def make_graph_line(start, end, buff=0.5):
             return Line(start=start.get_edge_center(DOWN)+DOWN*buff, end=end.get_edge_center(UP)+UP*buff)
@@ -1185,11 +1187,11 @@ class g_Conclusion(Slide, ThreeDScene):
 
         conc = Text(' V. Conclusions', font_size=36)
         conc = VGroup(conc, draw_box(conc))
-        q1 = Text('1. Does Corpus Affect Performance?', font_size=24).shift(UP*1).shift(LEFT*2.5)
-        a1 = Text('Yes', font_size=24).shift(UP*0.5).shift(RIGHT*2)
-        q2 = Text('2. Does Number of Files Impact\nPerformance?', font_size=24).shift(DOWN*1).shift(LEFT*2.5)
-        a2 = Text('Yes regarding Lexis\nand Westlaw, no regarding\nHarvey', font_size=24).shift(DOWN*2.5).shift(RIGHT*2)
-
+        q1 = Text('1. Does Corpus Affect Performance?', font_size=24).shift(UP*2).shift(LEFT*2.5)
+        a1 = Text('Yes', font_size=24).shift(UP*1.5).shift(RIGHT*2)
+        q2 = Text('2. Does Number of Files Impact\nPerformance?', font_size=24).shift(DOWN*0).shift(LEFT*2.5)
+        a2 = Text('Yes regarding Lexis\nand Westlaw, no regarding\nHarvey', font_size=24).shift(DOWN*1.3).shift(RIGHT*2)
+        takeaway = Text('3. Focus on effective methodology', font_size=24).shift(DOWN*2.5, LEFT*2.3)
         self.play(FadeIn(conc))
         self.next_slide()
         self.play(FadeOut(conc), Write(q1))
@@ -1199,10 +1201,11 @@ class g_Conclusion(Slide, ThreeDScene):
         self.play(Write(q2))
         self.next_slide()
         self.play(Write(a2))
+        self.play(Write(takeaway))
 
         questions = Text('Thank you!\nQuestions?', font_size=24)
         self.next_slide()
-        self.play(map(FadeOut, [q1, q2, a1, a2]), Write(questions))
+        self.play(map(FadeOut, [q1, q2, a1, a2, takeaway]), Write(questions))
 
     def _further(self):
         discussion_title = VGroup(Text('IV. Discussion', font_size=36))
