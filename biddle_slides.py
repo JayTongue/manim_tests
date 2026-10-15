@@ -1201,6 +1201,7 @@ class g_Conclusion(Slide, ThreeDScene):
         self.play(Write(q2))
         self.next_slide()
         self.play(Write(a2))
+        self.next_slide()
         self.play(Write(takeaway))
 
         questions = Text('Thank you!\nQuestions?', font_size=24)
